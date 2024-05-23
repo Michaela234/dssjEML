@@ -8,3 +8,53 @@ body{
     font-weight: 400;
     font-style: normal;
 }
+/*color tokens*/
+:root{
+    --text-color-primary: black;
+    --text-color-secondary: white;
+    --background-color-lightGreen: #E9F3EB;
+    --background-color-lightYellow: #FEF8D3;
+    --background-color-lightBlue: #E1ECF7;
+    --icon-color-green: #89B792;
+    --icon-color-blue: #3175B9;
+}
+/*spacing tokens*/
+:root{
+    --spacing-xxs: 4px;
+    --spacing-xs: 8px;
+    --spacing-s: 12px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+    --spacing-xxxl: 64px;
+    --spacing-xxxxl: 96px;
+}
+/*font tokens*/
+:root{
+    --heading-fontSize: 48px;
+    --heading-fontweight: 700;
+    --subHeading-fontSize: 32px;
+    --subHeading-fontweight: 700;
+    --sectionTitle-fontSize: 24px;
+    --sectionTitle-fontweight: 700;
+    --navigationText-fontSize: 18px;
+    --navigationText-fontweight: 500;
+    --text--big-fontSize: 18px;
+    --text--big-fontweight: 300;
+    --text--small-fontSize: 16px;
+    --text--small-fontweight: 300;
+    --footerTitle-fontSize: 16px;
+    --footerTitle-fontweight: 700;
+    --footerText-fontSize: 16px;
+    --footerText-fontweight: 400;
+    --cardTitle--big-fontSize: 18px;
+    --cardTitle--big-fontweight: 700;
+    --cardTitle--small-fontSize: 16px;
+    --cardTitle--small-fontweight: 700;
+    --cardText-fontSize: 16px;
+    --cardText-fontweight: 300;
+    --cardText--link-fontSize: 16px;
+    --cardText--link-fontweight: 400;
+    --cardText--link-text-decoration: ;   
+}
