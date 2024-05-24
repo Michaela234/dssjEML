@@ -23,5 +23,10 @@ body{
 /*text styles*/
 :root{
     --heading-fontSize: 36px;
-    
+    --sectionTitle-fontSize:32px;
+    --navigationText-fontSize:16px;
+    --text--big-fontSize:24px;
+    --text--small-fontSize:20px;
+    --cardTitle-fontSize:32px;
+    --cardText-fontSize:16px;
 }
