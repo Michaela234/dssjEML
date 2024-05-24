@@ -1,7 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 .childPage__body{
     font-family: "Annie Use Your Telescope", cursive;
@@ -17,6 +21,9 @@ body{
     --background-color-lightBlue: #E1ECF7;
     --icon-color-green: #89B792;
     --icon-color-blue: #3175B9;
+    --icon-color-black: black;
+    --stroke-color-grey: #C9CACC;
+
 }
 /*spacing tokens*/
 :root{
@@ -30,7 +37,7 @@ body{
     --spacing-xxxl: 64px;
     --spacing-xxxxl: 96px;
 }
-/*font tokens*/
+/*text styles*/
 :root{
     --heading-fontSize: 48px;
     --heading-fontweight: 700;
@@ -57,4 +64,107 @@ body{
     --cardText--link-fontSize: 16px;
     --cardText--link-fontweight: 400;
     --cardText--link-text-decoration: ;   
+}
+/*basic text styling*/
+.sectionTitle{
+    font-size: var(--sectionTitle-fontSize);
+    font-weight: var(--sectionTitle-fontweight);
+}
+.text--big{
+    font-size: var(--text--big-fontSize);
+    font-weight: var(--text--big-fontweight);
+}
+.cardTitle{
+
+}
+
+/*button styling*/
+.button{
+    font-size: var(--text--small-fontSize);
+    font-weight: var(--text--small-fontweight);
+    color: var(--text-color-primary);
+}
+
+/*----------------dropdown--------------------*/
+.dropdownText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-l);
+    gap: var(--spacing-xxs);
+}
+.dropdownText__paragraph{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    /*only supported in WebKit-based browsers 
+    (like Chrome, Safari, and newer versions of Edge). 
+    It won't work in browsers like Firefox or older versions of Internet Explorer*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    
+}
+.dropdown__icon{
+    color: var(--icon-color-black);   
+}
+
+/*----------------Category section--------------------*/
+.category{
+    padding: var(--spacing-l);
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-l);
+    overflow: hidden;
+    background-color: var(--background-color-lightGreen);
+}
+.category__title{
+    padding-right: var(--spacing-l);
+}
+.category__paragraph{
+    padding-right: var(--spacing-l);
+}
+/*----product card----*/
+.categoryCards{
+    display: flex;
+    gap: var(--spacing-l);
+    overflow: auto;
+    
+}
+.categoryCard{
+    text-align: center;
+}
+
+/*----------------Galley section--------------------*/
+.gallery{
+
+}
+.galleryText{
+    background-color: var(--background-color-lightYellow);
+    padding: var(--spacing-l);
+    padding-bottom: var(--spacing-xxxxl);
+    overflow: hidden;
+}
+.galleryText__title{
+
+}
+.galleryText__paragraph{
+
+}
+.galleryImages{
+    display: flex;
+    overflow: auto;
+    gap: var(--spacing-s);
+    padding-left: var(--spacing-l);
+    
+}
+.galleryImages__image{
+
+}
+.gallery__paragraph{
+
+}
+.gallery__button{
+
 }

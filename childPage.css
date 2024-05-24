@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Annie Use Your Telescope", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*spacing tokens*/
+:root{
+    --spacing-xxs: 4px;
+    --spacing-xs: 8px;
+    --spacing-s: 12px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+    --spacing-xxxl: 64px;
+    --spacing-xxxxl: 96px;
+}
+/*text styles*/
+:root{
+    --heading-fontSize: 36px;
+    
+}
