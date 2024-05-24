@@ -74,8 +74,21 @@ body{
     font-size: var(--text--big-fontSize);
     font-weight: var(--text--big-fontweight);
 }
-.cardTitle{
-
+.cardTitle--big{
+    font-size: var(--cardTitle--big-fontSize);
+    font-weight: var(--cardTitle--big-fontweight);
+}
+.cardTitle--small{
+    font-size: var(--cardTitle--small-fontSize);
+    font-weight: var(--cardTitle--small-fontweight);
+}
+.cardText{
+    font-size: var(--cardText-fontSize);
+    font-weight: var(--cardText--link-fontweight);
+}
+.cardText--link{
+    font-size: var(--cardText--link-fontSize);
+    font-weight: var(--cardText--link-fontweight);
 }
 
 /*button styling*/
@@ -141,30 +154,18 @@ body{
 }
 
 /*----------------Galley section--------------------*/
-.gallery{
-
-}
 .galleryText{
     background-color: var(--background-color-lightYellow);
     padding: var(--spacing-l);
     padding-bottom: var(--spacing-xxxxl);
     overflow: hidden;
 }
-.galleryText__title{
-
-}
-.galleryText__paragraph{
-
-}
 .galleryImages{
     display: flex;
     overflow: auto;
     gap: var(--spacing-s);
     padding-left: var(--spacing-l);
-    margin-top: -96px;
-}
-.galleryImages__image{
-
+    margin-top: -64px;
 }
 .galleryInformation{
     display: flex;
@@ -172,4 +173,96 @@ body{
     align-items: center;
     gap: var(--spacing-xxs);
     padding-top: var(--spacing-xs);
+}
+
+/*----------------Event slider--------------------*/
+.eventSlider{
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-l);
+    padding-right: 0px;
+    gap: var(--spacing-s);
+    background-color: var(--background-color-lightBlue);
+}
+.eventSlider__title{
+
+}
+/*---------Event card-------------*/
+.eventCards{
+    display: flex;
+}
+.eventCard{
+    display: flex;
+    flex-direction: column;
+}
+.eventDate{
+    background-color: black;
+    display: inline-flex;
+    flex-direction: column;
+    padding: var(--spacing-xxs) var(--spacing-s);
+    border-radius: 2px;
+
+}
+.eventDate__number{
+    color: var(--text-color-secondary);
+    font-weight: 600;
+}
+.eventDate__text{
+    color: var(--text-color-secondary);
+    font-size: 12px;
+    font-weight: 300;
+}
+.eventCard__image{
+
+}
+
+
+.eventTitle{
+    align-self: stretch;
+}
+.eventTitle__title{
+
+}
+.eventTitle__seperator{
+
+}
+
+
+
+.eventInfo{
+    display: flex;
+    justify-content: space-between;
+}
+.eventLocation{
+    display: flex;
+}
+.eventLocation__icon{
+
+}
+.eventLocation__text{
+
+}
+.eventInfo__link{
+
+}
+
+/*----------------Event slider--------------------*/
+.someGallery{
+}
+.someGallery__title{
+    text-align: center;
+    padding-bottom: var(--spacing-m);
+}
+.someImages{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-m);
+}
+
+.someFooter{
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xxxxl);
 }
