@@ -85,16 +85,6 @@ body {
   font-size: var(--cardText-fontSize);
 }
 
-:root {
-  --heading-fontSize: 36px;
-  --sectionTitle-fontSize: 32px;
-  --navigationText-fontSize: 16px;
-  --text--big-fontSize: 24px;
-  --text--small-fontSize: 20px;
-  --cardTitle-fontSize: 32px;
-  --cardText-fontSize: 16px;
-}
-
 /*header*/
 .header {
   background-color: hsla(209, 100%, 89%, 1);
@@ -271,7 +261,7 @@ body {
   font-size: var(--cardText-fontSize);
   background-color: white;
 }
-/* baggrounds*/
+/* backgrounds*/
 
 .baggroundNature {
   background-image: url(images/naturBaggroundImage.jpeg);
@@ -333,6 +323,20 @@ body {
   background-size: contain;
   z-index: 1;
 }
+.natureDescription::after{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(Childpageimages/clouds/natureMidClouds.svg);
+  background-repeat: no-repeat;
+  margin-top: -10%;
+  background-size: contain;
+  z-index: 1;
+}
+
 .baggroundNatur::before {
   content: "";
   position: absolute;
