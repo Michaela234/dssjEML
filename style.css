@@ -140,9 +140,6 @@ body{
     width: 100%;
     overflow: hidden;
     text-align: center;
-    /*only supported in WebKit-based browsers 
-    (like Chrome, Safari, and newer versions of Edge). 
-    It won't work in browsers like Firefox or older versions of Internet Explorer*/
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -174,13 +171,13 @@ body{
     display: flex;
     gap: var(--spacing-l);
     overflow: auto;
+    scrollbar-width: none;
     
 }
 .categoryCard{
     text-align: center;
 }
 .categoryCard__Image{
-
 }
 /*----------------Galley section--------------------*/
 .galleryText{
@@ -195,6 +192,7 @@ body{
     gap: var(--spacing-s);
     padding-left: var(--spacing-l);
     margin-top: -64px;
+    scrollbar-width: none;
 }
 .galleryInformation{
     display: flex;
@@ -220,6 +218,7 @@ body{
     display: flex;
     gap: var(--spacing-l);
     overflow: auto;
+    scrollbar-width: none;
 }
 .eventCard{
     display: flex;

@@ -21,6 +21,73 @@ body {
   --spacing-xxxxl: 96px;
 }
 /*text styles*/
+<<<<<<< Updated upstream
+=======
+:root{
+    --heading-fontSize: 36px;
+    --sectionTitle-fontSize:32px;
+    --navigationText-fontSize:16px;
+    --text--big-fontSize:24px;
+    --text--small-fontSize:20px;
+    --cardTitle-fontSize:32px;
+    --cardText-fontSize:16px;
+}
+.categoryCards {
+
+}
+
+.categoryCard {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative; /* Only the main container uses position: relative */
+}
+
+.categoryCard__image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.categoryCardText {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.categoryCardText__title {
+    z-index: 2; /* Does so its above the cloud */
+    font-size: var(--cardTitle-fontSize);
+    text-align: center;
+    padding: 16px;
+}
+
+.catagoryCard__cloud {
+    position: absolute;
+    top: 65%; /* So its positioned correctly on the card */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering the cloud */
+    z-index: 1; /* so the cloud is BEHIND the title */
+    width: 100%;
+    height: auto;
+}
+
+.categoryCardText__paragraph {
+    z-index: 2;
+    text-align: center;
+    font-size: var(--cardText-fontSize);
+}
+>>>>>>> Stashed changes
 :root {
   --heading-fontSize: 36px;
   --sectionTitle-fontSize: 32px;
@@ -36,7 +103,7 @@ body {
   position: relative;
   overflow: hidden;
   height: 80vh;
-  padding: 20px;
+  padding: var(--spacing-m);
   background-image: url("images/cloud_small 1.svg"),
     url("images/cloud_big 1.svg"), url("images/cloud_big-inverted 1.svg"),
     url("images/cloud_small 1.svg"), url("images/cloud_big 1.svg"),
@@ -44,8 +111,6 @@ body {
   background-repeat: no-repeat;
   background-size: 30% auto;
   background-position: 5% 7%, 20% 30%, 55% 80%, 82% 45%, 90% 0%, 10% 70%;
-  text-align: center;
-  z-index: 0;
   animation: moveClouds 15s linear infinite;
 }
 @keyframes moveClouds {
@@ -69,9 +134,15 @@ body {
   font-size: var(--navigationText-fontSize);
   color: black;
 }
+.headerText{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  justify-content: center;
+}
 .header__heading {
   font-size: var(--heading-fontSize);
-  margin-top: 50%;
 }
 .header__text {
   font-size: var(--text--big-fontSize);
@@ -85,8 +156,10 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  overflow: hidden;
 }
+
+
+
 .categories::after {
   content: "";
   position: absolute;
@@ -98,8 +171,13 @@ body {
   background-repeat: no-repeat;
   margin-top: -10%;
   background-size: contain;
-  z-index: 3;
+
 }
+
+
+
+
+
 .categoryText__title {
   font-size: var(--sectionTitle-fontSize);
   margin: var(--spacing-xl);
