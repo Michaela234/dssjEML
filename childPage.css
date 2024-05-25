@@ -21,69 +21,68 @@ body {
   --spacing-xxxxl: 96px;
 }
 /*text styles*/
-:root{
-    --heading-fontSize: 36px;
-    --sectionTitle-fontSize:32px;
-    --navigationText-fontSize:16px;
-    --text--big-fontSize:24px;
-    --text--small-fontSize:20px;
-    --cardTitle-fontSize:32px;
-    --cardText-fontSize:16px;
+:root {
+  --heading-fontSize: 36px;
+  --sectionTitle-fontSize: 32px;
+  --navigationText-fontSize: 16px;
+  --text--big-fontSize: 24px;
+  --text--small-fontSize: 20px;
+  --cardTitle-fontSize: 32px;
+  --cardText-fontSize: 16px;
 }
 .categoryCards {
-
 }
 
 .categoryCard {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative; /* Only the main container uses position: relative */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative; /* Only the main container uses position: relative */
 }
 
 .categoryCard__image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .categoryCardText {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .categoryCardText__title {
-    z-index: 2; /* Does so its above the cloud */
-    font-size: var(--cardTitle-fontSize);
-    text-align: center;
-    padding: 16px;
+  z-index: 2; /* Does so its above the cloud */
+  font-size: var(--cardTitle-fontSize);
+  text-align: center;
+  padding: 16px;
 }
 
 .catagoryCard__cloud {
-    position: absolute;
-    top: 65%; /* So its positioned correctly on the card */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centering the cloud */
-    z-index: 1; /* so the cloud is BEHIND the title */
-    width: 100%;
-    height: auto;
+  position: absolute;
+  top: 65%; /* So its positioned correctly on the card */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centering the cloud */
+  z-index: 1; /* so the cloud is BEHIND the title */
+  width: 100%;
+  height: auto;
 }
 
 .categoryCardText__paragraph {
-    z-index: 2;
-    text-align: center;
-    font-size: var(--cardText-fontSize);
+  z-index: 2;
+  text-align: center;
+  font-size: var(--cardText-fontSize);
 }
 
 :root {
@@ -92,9 +91,10 @@ body {
   --navigationText-fontSize: 16px;
   --text--big-fontSize: 24px;
   --text--small-fontSize: 20px;
-  --cardTitle-fontSize: 24px;
+  --cardTitle-fontSize: 32px;
   --cardText-fontSize: 16px;
 }
+
 /*header*/
 .header {
   background-color: hsla(209, 100%, 89%, 1);
@@ -132,7 +132,7 @@ body {
   font-size: var(--navigationText-fontSize);
   color: black;
 }
-.headerText{
+.headerText {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -154,27 +154,8 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  padding: var(--spacing-l) 0;
 }
-
-
-
-.categories::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(images/categoriesClouds.svg);
-  background-repeat: no-repeat;
-  margin-top: -10%;
-  background-size: contain;
-
-}
-
-
-
-
 
 .categoryText__title {
   font-size: var(--sectionTitle-fontSize);
@@ -201,12 +182,17 @@ body {
 .categorySection {
 }
 .categoryDescription {
-  padding: var(--spacing-m);
-  background-color: hsla(108, 32%, 64%, 1);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.natureDescription {
+  position: relative;
+  background-color: hsla(108, 32%, 64%, 1);
+  z-index: 1;
 }
 .categoryDescription__title {
   grid-column: 1 / span 2;
@@ -223,13 +209,18 @@ body {
   width: 100%;
 }
 /* Product cards */
+.categoryCards {
+  display: flex;
+  justify-content: center; /* Centrerer kortene vandret */
+}
 .categoryCard {
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 8px;
+  margin: var(--spacing-s);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 250px;
+  max-width: 230px;
   width: 100%;
   text-align: center;
   display: flex;
@@ -237,22 +228,26 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  position: relative; /* Only the main container uses position: relative */
+  position: relative;
 }
-
+.categoryCardLeft {
+  margin-right: 30%;
+  margin-bottom: var(--spacing-xl);
+}
+.categoryCardsRight {
+  margin-left: 30%;
+}
 .categoryCard__image {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
-
 .categoryCardText {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .categoryCardText__title {
   z-index: 2; /* Does so its above the cloud */
   font-size: var(--cardTitle-fontSize);
@@ -261,7 +256,6 @@ body {
   position: absolute;
   top: 65%;
 }
-
 .catagoryCard__cloud {
   position: absolute;
   top: 77.5%; /* So its positioned correctly on the card */
@@ -271,7 +265,6 @@ body {
   width: 100%;
   height: auto;
 }
-
 .categoryCardText__paragraph {
   z-index: 2;
   text-align: center;
@@ -279,11 +272,14 @@ body {
   background-color: white;
 }
 /* baggrounds*/
+
 .baggroundNature {
   background-image: url(images/naturBaggroundImage.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
+  position: relative;
+  position: sticky;
 }
 .baggroundActive {
   background-image: url(images/activeBaggroundImage.jpeg);
@@ -310,6 +306,43 @@ body {
   height: 90vh;
 }
 
-/* Product card*/
-.categoryCards {
+/* The clouds who seperats the sections*/
+
+.categories::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/categoriesClouds.svg);
+  background-repeat: no-repeat;
+  margin-top: -10%;
+  background-size: contain;
+}
+.natureDescription::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(Childpageimages/clouds/natureTopClouds.svg);
+  background-repeat: no-repeat;
+  margin-top: -10%;
+  background-size: contain;
+  z-index: 1;
+}
+.baggroundNatur::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(Childpageimages/clouds/natureMidClouds.svg);
+  background-repeat: no-repeat;
+  margin-top: -10%;
+  background-size: contain;
+  z-index: 1;
 }
