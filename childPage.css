@@ -313,7 +313,7 @@ body {
 .natureDescription::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -5%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -326,7 +326,7 @@ body {
 .natureDescription::after{
   content: "";
   position: absolute;
-  top: 100%;
+  top: 105%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -336,6 +336,11 @@ body {
   background-size: contain;
   z-index: 1;
 }
+
+
+
+
+
 
 .baggroundNatur::before {
   content: "";
