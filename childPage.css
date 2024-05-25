@@ -85,6 +85,7 @@ body {
     text-align: center;
     font-size: var(--cardText-fontSize);
 }
+
 :root {
   --heading-fontSize: 36px;
   --sectionTitle-fontSize: 32px;
@@ -275,6 +276,7 @@ body {
   z-index: 2;
   text-align: center;
   font-size: var(--cardText-fontSize);
+  background-color: white;
 }
 /* baggrounds*/
 .baggroundNature {

@@ -256,6 +256,76 @@ body{
     padding-right: var(--spacing-l);
 }
 /*----product card----*/
+/*----------------childbanner--------------------*/
+.childbanner {
+    background-color: var(--background-color-lightBlue);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    font-family: "Annie Use Your Telescope", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url("images/cloud_small 1.svg"),
+    url("images/cloud_big 1.svg"), url("images/cloud_big-inverted 1.svg"),
+    url("images/cloud_small 1.svg"), url("images/cloud_big 1.svg"),
+    url("images/cloud_big-inverted 1.svg");
+  background-repeat: no-repeat;
+  background-size: 30% auto;
+  background-position: 5% 7%, 20% 30%, 55% 80%, 82% 45%, 90% 0%, 10% 70%;
+  animation: moveClouds 15s linear infinite;
+  }
+  @keyframes moveClouds {
+    0% {
+      background-position-x: -10%, 5%, 40%, 67%, 75%, -5%;
+    }
+    100% {
+      background-position-x: 90%, 105%, 140%, 167%, 175%, 85%;
+    }
+  }
+  .childbanner__animals {
+    max-width: 100%;
+    margin: auto; /* Center horizontally */
+    justify-self: center; /* Center horizontally */
+    align-self: center; /* Center vertically */
+  }
+  
+  .childbannerText {
+    text-align: center;
+    margin: auto;
+  }
+.childbannerText__title{
+    font-size: 32px;
+    padding: var(--spacing-m);
+}
+.childPageBanner__button{
+    align-self: center;
+}
+.childPageBanner{
+    display: flex;
+    flex-direction: column;
+}
+.BannerText__title{
+    padding: var(--spacing-l);
+}
+.BannerText__paragraph{
+    padding-left: var(--spacing-l);
+    padding-bottom: var(--spacing-s);
+}
+
+@media screen and (min-width: 700px) {
+    .childbanner {
+        grid-template-columns: 1fr 1fr;
+        background-size: 19% auto;
+    }
+  
+    .childbanner__animals {
+        padding-top: 30%;
+    }
+    .childbannerText__title{
+        font-size: 65px;
+    }
+  }
+/*----------------childbanner--------------------*/
 .categoryCards{
     display: flex;
     gap: var(--spacing-l);
