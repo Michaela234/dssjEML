@@ -111,6 +111,95 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-l);
+    align-items: center;
+}
+
+.navbar__menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+.menuItem__link{
+    font-size: var(--navigationText-fontSize);
+    font-weight: var(--navigationText-fontweight);
+    color: var(--text-color-secondary);
+    text-decoration: none;
+    padding-left: var(--spacing-l);
+}
+.hamburger.active + .navbar__menu .menuItem__link,
+.navbar__menu.active .menuItem__link {
+    color: black;
+}
+.menuItem{
+    list-style: none;
+}
+.hamburger{
+    display: none;
+}
+.hamburger__bar{
+    margin-top: var(--spacing-xxs);
+    display: block;
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    background: white;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.hamburger.active .hamburger__bar {
+    background: black;
+}
+.hamburger__bar--middle{
+    display: block;
+    width: 23px;
+    margin-left: 9px;
+}
+@media (max-width: 768px) {
+    .navbar__menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar__menu.active {
+        left: 0;
+    }
+
+    .menuItem {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .hamburger__bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .hamburger__bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .hamburger__bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
 .heading{
     display: flex;
     flex-direction: column;
@@ -175,6 +264,8 @@ body{
     
 }
 .categoryCard{
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 .categoryCard__Image{
@@ -303,3 +394,4 @@ body{
 .copyrightSection__text{
     text-align: center;
 }
+

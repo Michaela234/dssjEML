@@ -21,8 +21,6 @@ body {
   --spacing-xxxxl: 96px;
 }
 /*text styles*/
-<<<<<<< Updated upstream
-=======
 :root{
     --heading-fontSize: 36px;
     --sectionTitle-fontSize:32px;
@@ -87,7 +85,6 @@ body {
     text-align: center;
     font-size: var(--cardText-fontSize);
 }
->>>>>>> Stashed changes
 :root {
   --heading-fontSize: 36px;
   --sectionTitle-fontSize: 32px;
