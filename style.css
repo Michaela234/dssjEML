@@ -282,6 +282,9 @@ body{
       background-position-x: 90%, 105%, 140%, 167%, 175%, 85%;
     }
   }
+  .childPagebanner__topcloud{
+
+  }
   .childbanner__animals {
     max-width: 100%;
     margin: auto; /* Center horizontally */
@@ -337,8 +340,6 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
-}
-.categoryCard__Image{
 }
 /*----------------Galley section--------------------*/
 .galleryText{
