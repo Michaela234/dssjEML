@@ -261,7 +261,7 @@ body {
   font-size: var(--cardText-fontSize);
   background-color: white;
 }
-/* baggrounds*/
+/* backgrounds*/
 
 .baggroundNature {
   background-image: url(images/naturBaggroundImage.jpeg);
@@ -323,6 +323,20 @@ body {
   background-size: contain;
   z-index: 1;
 }
+.natureDescription::after{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(Childpageimages/clouds/natureMidClouds.svg);
+  background-repeat: no-repeat;
+  margin-top: -10%;
+  background-size: contain;
+  z-index: 1;
+}
+
 .baggroundNatur::before {
   content: "";
   position: absolute;
