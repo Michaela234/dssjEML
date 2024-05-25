@@ -101,7 +101,33 @@ body{
     border-radius: 4px;
     padding: var(--spacing-xs) var(--spacing-s);
 }
-
+/*----------------Header--------------------*/
+.header{
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.15) 100%), url(tryImages/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: var(--spacing-xl);
+}
+.heading__subHeading{
+    color: var(--text-color-secondary);
+    font-size: var(--subHeading-fontSize);
+    font-weight: var(--subHeading-fontweight);
+    margin-left: -96px;
+}
+.heading__heading{
+    color: var(--text-color-secondary);
+    font-size: var(--heading-fontSize);
+    font-weight: var(--heading-fontweight);
+}
 /*----------------dropdown--------------------*/
 .dropdownText{
     display: flex;
@@ -135,6 +161,7 @@ body{
     gap: var(--spacing-l);
     overflow: hidden;
     background-color: var(--background-color-lightGreen);
+    margin-bottom: var(--spacing-l);
 }
 .category__title{
     padding-right: var(--spacing-l);
@@ -152,7 +179,9 @@ body{
 .categoryCard{
     text-align: center;
 }
+.categoryCard__Image{
 
+}
 /*----------------Galley section--------------------*/
 .galleryText{
     background-color: var(--background-color-lightYellow);
@@ -173,6 +202,7 @@ body{
     align-items: center;
     gap: var(--spacing-xxs);
     padding-top: var(--spacing-xs);
+    margin-bottom: var(--spacing-l);
 }
 
 /*----------------Event slider--------------------*/
@@ -183,13 +213,13 @@ body{
     padding-right: 0px;
     gap: var(--spacing-s);
     background-color: var(--background-color-lightBlue);
-}
-.eventSlider__title{
-
+    margin-bottom: var(--spacing-l);
 }
 /*---------Event card-------------*/
 .eventCards{
     display: flex;
+    gap: var(--spacing-l);
+    overflow: auto;
 }
 .eventCard{
     display: flex;
@@ -197,38 +227,23 @@ body{
 }
 .eventDate{
     background-color: black;
-    display: inline-flex;
     flex-direction: column;
-    padding: var(--spacing-xxs) var(--spacing-s);
+    color: white;
     border-radius: 2px;
-
-}
-.eventDate__number{
-    color: var(--text-color-secondary);
-    font-weight: 600;
-}
-.eventDate__text{
-    color: var(--text-color-secondary);
-    font-size: 12px;
-    font-weight: 300;
+    padding: var(--spacing-xxs) var(--spacing-s);
+    align-self: flex-start;
+    z-index: 1;
+    margin-left: var(--spacing-xs);
 }
 .eventCard__image{
-
+    margin-top: -32px;
 }
-
-
 .eventTitle{
-    align-self: stretch;
+    display: inline-flex;
+    flex-wrap: wrap;
 }
 .eventTitle__title{
-
 }
-.eventTitle__seperator{
-
-}
-
-
-
 .eventInfo{
     display: flex;
     justify-content: space-between;
@@ -236,33 +251,56 @@ body{
 .eventLocation{
     display: flex;
 }
-.eventLocation__icon{
-
-}
-.eventLocation__text{
-
-}
-.eventInfo__link{
-
-}
 
 /*----------------Event slider--------------------*/
 .someGallery{
 }
 .someGallery__title{
     text-align: center;
-    padding-bottom: var(--spacing-m);
+    padding-bottom: var(--spacing-l);
 }
 .someImages{
-    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: var(--spacing-m);
+    gap: var(--spacing-l);
+    padding-bottom: var(--spacing-l);
 }
-
 .someFooter{
     display: flex;
     justify-content: center;
     gap: var(--spacing-xxxxl);
+    padding: var(--spacing-l) 0px;
+    border-top: 0.5px solid var(--stroke-color-grey);
+}
+.someIcons{
+    display: flex;
+    gap: var(--spacing-m);
+}
+/*----------------Event slider--------------------*/
+.footer{
+    border-top: 0.5px solid var(--stroke-color-grey);
+    gap: var(--spacing-xl);
+}
+.footerLinks{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-m) 0px;
+}
+.footerInformation{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px var(--spacing-xl);
+}
+.footerLinks__link{
+    text-decoration: none;
+    color: var(--text-color-primary);
+}
+.copyrightSection{
+    border-top: 0.5px solid var(--stroke-color-grey);
+    padding: var(--spacing-m);
+}
+.copyrightSection__text{
+    text-align: center;
 }
