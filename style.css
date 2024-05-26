@@ -13,6 +13,7 @@ body {
   font-style: normal;
 }
 /*color tokens*/
+<<<<<<< Updated upstream
 :root {
   --text-color-primary: black;
   --text-color-secondary: white;
@@ -23,6 +24,19 @@ body {
   --icon-color-blue: #3175b9;
   --icon-color-black: black;
   --stroke-color-grey: #c9cacc;
+=======
+:root{
+    --text-color-primary: black;
+    --text-color-secondary: white;
+    --background-color-lightGreen: #E9F3EB;
+    --background-color-lightYellow: #FEF8D3;
+    --background-color-lightBlue: #E1ECF7;
+    --icon-color-green: #89B792;
+    --icon-color-blue: #3175B9;
+    --icon-color-black: black;
+    --stroke-color-grey: #C9CACC;
+ 
+>>>>>>> Stashed changes
 }
 /*spacing tokens*/
 :root {
@@ -37,6 +51,7 @@ body {
   --spacing-xxxxl: 96px;
 }
 /*text styles*/
+<<<<<<< Updated upstream
 :root {
   --heading-fontSize: 48px;
   --heading-fontweight: 700;
@@ -76,6 +91,34 @@ body {
   --desktop-cardTitle--small-fontSize: 24px;
   --desktop-cardText-fontSize: 24px;
   --desktop-cardText--link-fontSize: 24px;
+=======
+:root{
+    --heading-fontSize: 48px;
+    --heading-fontweight: 700;
+    --subHeading-fontSize: 32px;
+    --subHeading-fontweight: 700;
+    --sectionTitle-fontSize: 24px;
+    --sectionTitle-fontweight: 700;
+    --navigationText-fontSize: 18px;
+    --navigationText-fontweight: 500;
+    --text--big-fontSize: 18px;
+    --text--big-fontweight: 300;
+    --text--small-fontSize: 16px;
+    --text--small-fontweight: 300;
+    --footerTitle-fontSize: 16px;
+    --footerTitle-fontweight: 700;
+    --footerText-fontSize: 16px;
+    --footerText-fontweight: 400;
+    --cardTitle--big-fontSize: 18px;
+    --cardTitle--big-fontweight: 700;
+    --cardTitle--small-fontSize: 16px;
+    --cardTitle--small-fontweight: 700;
+    --cardText-fontSize: 16px;
+    --cardText-fontweight: 300;
+    --cardText--link-fontSize: 16px;
+    --cardText--link-fontweight: 400;
+    --cardText--link-text-decoration: ;  
+>>>>>>> Stashed changes
 }
 /*basic text styling*/
 .sectionTitle {
@@ -102,7 +145,7 @@ body {
   font-size: var(--cardText--link-fontSize);
   font-weight: var(--cardText--link-fontweight);
 }
-
+ 
 /*button styling*/
 .button {
   font-size: var(--text--small-fontSize);
@@ -134,7 +177,7 @@ body {
   padding: var(--spacing-l);
   align-items: center;
 }
-
+ 
 .navbar__menu {
   display: flex;
   justify-content: space-between;
@@ -177,10 +220,55 @@ body {
   margin-left: 9px;
 }
 @media (max-width: 768px) {
+<<<<<<< Updated upstream
   .navbar__menu {
     position: fixed;
     left: -100%;
     top: 0;
+=======
+    .navbar__menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+ 
+    .navbar__menu.active {
+        left: 0;
+    }
+ 
+    .menuItem {
+        margin: 2.5rem 0;
+    }
+ 
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+ 
+    .hamburger.active .hamburger__bar:nth-child(2) {
+        opacity: 0;
+    }
+ 
+    .hamburger.active .hamburger__bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+ 
+    .hamburger.active .hamburger__bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+.heading{
+    display: flex;
+>>>>>>> Stashed changes
     flex-direction: column;
     background-color: #fff;
     width: 100%;
@@ -241,6 +329,7 @@ body {
   padding: var(--spacing-l);
   gap: var(--spacing-xxs);
 }
+<<<<<<< Updated upstream
 .dropdownText__paragraph {
   width: 100%;
   overflow: hidden;
@@ -251,8 +340,21 @@ body {
 }
 .dropdown__icon {
   color: var(--icon-color-black);
+=======
+.dropdownText__paragraph{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+   
 }
-
+.dropdown__icon{
+    color: var(--icon-color-black);  
+>>>>>>> Stashed changes
+}
+ 
 /*----------------Category section--------------------*/
 .category {
   padding: var(--spacing-l);
@@ -270,13 +372,13 @@ body {
 .category__paragraph {
   padding-right: var(--spacing-l);
 }
-
+ 
 @media (min-width: 701px) {
 <<<<<<< Updated upstream
     .categoryCards {
         width: 100%; /* Make sure the cards take up the full width */
     }
-
+ 
     .categoryCard__Image {
         width: 350px; /* Set a fixed width for the images */
         max-width: none; /* Remove any maximum width */
@@ -297,6 +399,7 @@ body {
     .someGallery__title{
         padding: var(--spacing-l);
     }
+<<<<<<< Updated upstream
 =======
   .categoryCards {
     width: 100%; /* Make sure the cards take up the full width */
@@ -317,8 +420,11 @@ body {
   .cardTitle--small {
     font-size: var(--desktop-cardTitle--small-fontSize);
   }
+=======
+ 
+>>>>>>> Stashed changes
 }
-
+ 
 /*----product card----*/
 /*----------------childbanner--------------------*/
 .childbanner {
@@ -345,6 +451,7 @@ body {
   100% {
     background-position-x: 90%, 105%, 140%, 167%, 175%, 85%;
   }
+<<<<<<< Updated upstream
 }
 .childPagebanner__topcloud {
 }
@@ -358,6 +465,25 @@ body {
 .childbannerText {
   text-align: center;
   margin: auto;
+=======
+  .childPagebanner__topcloud{
+ 
+  }
+  .childbanner__animals {
+    max-width: 100%;
+    margin: auto; /* Center horizontally */
+    justify-self: center; /* Center horizontally */
+    align-self: center; /* Center vertically */
+  }
+ 
+  .childbannerText {
+    text-align: center;
+    margin: auto;
+  }
+.childbannerText__title{
+    font-size: 32px;
+    padding: var(--spacing-m);
+>>>>>>> Stashed changes
 }
 .childbannerText__title {
   font-size: 32px;
@@ -377,11 +503,25 @@ body {
   padding-left: var(--spacing-l);
   padding-bottom: var(--spacing-s);
 }
-
+ 
 @media screen and (min-width: 700px) {
+<<<<<<< Updated upstream
   .childbanner {
     grid-template-columns: 1fr 1fr;
     background-size: 19% auto;
+=======
+    .childbanner {
+        grid-template-columns: 1fr 1fr;
+        background-size: 19% auto;
+    }
+ 
+    .childbanner__animals {
+        padding-top: 30%;
+    }
+    .childbannerText__title{
+        font-size: 65px;
+    }
+>>>>>>> Stashed changes
   }
 
   .childbanner__animals {
@@ -398,13 +538,13 @@ body {
   overflow: auto;
   scrollbar-width: none;
 }
-
+ 
 .categoryCard {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-
+ 
 /*----------------Galley section--------------------*/
 .galleryText {
   background-color: var(--background-color-lightYellow);
@@ -412,7 +552,7 @@ body {
   padding-bottom: var(--spacing-xxxxl);
   overflow: hidden;
 }
-
+ 
 .galleryImages {
   display: flex;
   overflow-x: auto;
@@ -420,12 +560,12 @@ body {
   padding-left: var(--spacing-l);
   margin-top: -64px;
 }
-
+ 
 .galleryImages__image {
   width: 250px;
   height: auto;
 }
-
+ 
 .galleryInformation {
   display: flex;
   flex-direction: column;
@@ -434,8 +574,9 @@ body {
   padding-top: var(--spacing-xs);
   margin-bottom: var(--spacing-l);
 }
-
+ 
 @media screen and (min-width: 700px) {
+<<<<<<< Updated upstream
   .galleryImages {
     width: 95%;
     justify-content: center;
@@ -445,6 +586,17 @@ body {
     width: 150px; /* Smaller size for images */
     height: auto;
   }
+=======
+    .galleryImages {
+        width: 95%;
+        justify-content: center;
+    }
+ 
+    .galleryImages__image {
+        width: 150px; /* Smaller size for images */
+        height: auto;
+    }
+>>>>>>> Stashed changes
 }
 /*----------------Event slider--------------------*/
 /*----------------Event card--------------------*/
@@ -454,12 +606,12 @@ body {
   overflow: auto;
   scrollbar-width: none;
 }
-
+ 
 .eventCard {
   display: flex;
   flex-direction: column;
 }
-
+ 
 .eventDate {
   background-color: black;
   flex-direction: column;
@@ -470,35 +622,36 @@ body {
   z-index: 1;
   margin-left: var(--spacing-xs);
 }
-
+ 
 .eventCard__image {
   margin-top: -32px;
 }
-
+ 
 .eventTitle {
   display: inline-flex;
   flex-wrap: wrap;
 }
-
+ 
 .eventSlider__title {
     padding-left: var(--spacing-l);
     padding-bottom: var(--spacing-m);
 }
-
+ 
 .eventInfo {
   display: flex;
   justify-content: space-between;
 }
-
+ 
 .eventLocation {
   display: flex;
 }
-
+ 
 @media (min-width: 700px) {
 <<<<<<< Updated upstream
     .eventCards {
-
+ 
     }
+<<<<<<< Updated upstream
 =======
   .eventCards {
     justify-content: center; /* Center the cards horizontally */
@@ -513,6 +666,17 @@ body {
     width: 100%; /* Make the image fill the width of its container */
     height: auto;
   }
+=======
+ 
+    .eventCard {
+        flex: 1 0 300px; /* Make each card take up the same space with a minimum width of 300px */
+    }
+ 
+    .eventCard__image {
+        width: 100%; /* Make the image fill the width of its container */
+        height: auto;
+    }
+>>>>>>> Stashed changes
 }
 /*----------------Event slider--------------------*/
 .someGallery {
@@ -582,10 +746,23 @@ body {
   display: none;
 }
 @media (min-width: 700px) {
+<<<<<<< Updated upstream
   .someImages__desktopimages {
     display: block;
   }
   .someImages__image {
     width: 25%;
   }
+=======
+    .someImages__desktopimages {
+        display: block;
+    }
+    .someImages__image{
+        width: 25%;
+    }
+    .footerInformation{
+        font-size: 24px;
+    }
+ 
+>>>>>>> Stashed changes
 }

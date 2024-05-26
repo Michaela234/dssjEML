@@ -375,8 +375,9 @@ animation: moveClouds 15s linear infinite;
 }
 /*Whishlist icon*/
 .wishListIcon {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   width: 90px;
   height: 90px;
@@ -387,8 +388,11 @@ animation: moveClouds 15s linear infinite;
   z-index: 10;
   border-radius: 12px 0 0 12px;
 }
+.wishListIcon__image{
+  width: 50px;
+}
 .wishListCloseIcon {
-  width: auto;
+  width: 1px;
   cursor: pointer;
   position: absolute;
   top: 10px;
@@ -407,7 +411,7 @@ animation: moveClouds 15s linear infinite;
   background-color: white;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   transition: right 0.3s ease-in-out;
-  padding: 20px;
+  padding: var(--spacing-xl) var(--spacing-l);
   z-index: 9;
 }
 .wishList.open {
@@ -507,6 +511,7 @@ animation: moveClouds 15s linear infinite;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+<<<<<<< Updated upstream
 }
 .categoryCardsleft {
   margin: var(--spacing-xxxxl) var(--spacing-xl) var(--spacing-xl)
@@ -515,6 +520,9 @@ animation: moveClouds 15s linear infinite;
 }
 .categoryCardsright {
   margin-bottom: var(--spacing-xxxxl);
+=======
+  gap: var(--spacing-l);
+>>>>>>> Stashed changes
 }
 .categoryCard {
   display: flex;
@@ -522,38 +530,82 @@ animation: moveClouds 15s linear infinite;
   max-width: 300px;
   position: relative;
 }
+<<<<<<< Updated upstream
 .categoryCard__image {
   border: 8px solid white;
 }
 .categoryCartText {
   position: relative;
+=======
+.categoryCard--left{
+  margin-top: 8rem;
 }
-.categoryCardText::before {
-  content: "";
-  position: absolute;
-  top: 180px;
-  width: 100%;
-  height: 100%;
-  background-image: url(Childpageimages/productcard/productCard_cloud.svg);
+.categoryCard--right{
+  margin-top: 4rem;
+>>>>>>> Stashed changes
+}
+.categoryCard__background{
+  background-image: url('/Childpageimages/productcard/productCard_cloud.svg');
   background-repeat: no-repeat;
+  background-position: center bottom;
   background-size: contain;
+  padding-bottom: 100px; /* Adjust based on the size of the background image */
 }
+
+.categoryCard__image {
+  border: 8px solid white;
+  border-radius: 8px;
+}
+
+.categoryCardText {
+  text-align: center;
+  /* margin-top: -50px; Adjust based on the height of the image */
+}
+
 .categoryCardText__title {
+  background-image: url('/Childpageimages/productcard/productCard_cloud.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   font-size: var(--cardTitle-fontSize);
-  text-align: center;
-  background-color: white;
-  margin-top: -50px;
-  position: relative;
-  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125px;
+  margin-top: -100px;
 }
+
 .categoryCardText__paragraph {
-  text-align: center;
   font-size: var(--cardText-fontSize);
   background-color: white;
-  padding: 0 var(--spacing-l) var(--spacing-l) var(--spacing-l);
+  padding: var(--spacing-l);
   border-radius: 4px;
-  position: relative;
-  z-index: 1;
+  margin-top: -55px;
+  font-family: "Baskervville", serif;
+}
+.categorySave{
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: -50px;
+  right: -20px;
+}
+.categorySave__icon{
+  width: 100px;
+  height: 100px;
+}
+.categorySave__icon path {
+  transition: fill 0.3s ease;
+}
+
+.categorySave:hover .categorySave__icon path {
+  fill: #FFECBD;
+}
+.categorySave.clicked .categorySave__icon path {
+  fill: #FFCA42;
+}
+@media (min-width: 1000px){
+
 }
 /* backgrounds*/
 
@@ -561,31 +613,36 @@ animation: moveClouds 15s linear infinite;
   background-image: url(images/naturBaggroundImage.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 100vh;
 }
 .baggroundActive {
   background-image: url(images/activeBaggroundImage.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 90vh;
+  background-position: bottom;
+  height: 100vh;
 }
 .baggroundWater {
   background-image: url(images/WaterBaggroundImage.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 90vh;
+  background-position: bottom;
+  height: 100vh;
 }
 .baggroundCreative {
   background-image: url(images/creativeBaggroundImage.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 90vh;
+  background-position: center;
+  height: 100vh;
 }
 .baggroundCultural {
   background-image: url(images/culturelBaggroundImage.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 90vh;
+  background-position: center;
+  height: 100vh;
 }
 
 /* The clouds that seperats the sections*/
@@ -626,7 +683,6 @@ animation: moveClouds 15s linear infinite;
   background-repeat: no-repeat;
   margin-top: -10%;
   background-size: contain;
-  z-index: 1;
 }
 .activeDescription::before {
   content: "";
