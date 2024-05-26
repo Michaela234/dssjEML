@@ -120,9 +120,11 @@ body {
       rgba(0, 0, 0, 0.45) 0%,
       rgba(0, 0, 0, 0.15) 100%
     ),
-    url(tryImages/header.png);
+    url(images/headerImage1.png), url(images/headerImage2.png),
+    url(images/headerImage3.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto 100%;
+  background-position: center;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -141,12 +143,56 @@ body {
   padding: 0;
   margin: 0;
 }
+.navbar__logoImage {
+  width: 50px;
+}
+
+.headerSoMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.headerSoMe__line {
+  width: 2px;
+  height: 100px;
+  background-color: white;
+  margin: 10px 0;
+}
+
+.headerSoMe__icon {
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+  color: white;
+}
 .menuItem__link {
   font-size: var(--navigationText-fontSize);
   font-weight: var(--navigationText-fontweight);
   color: var(--text-color-secondary);
   text-decoration: none;
   padding-left: var(--spacing-l);
+  position: relative;
+}
+
+.menuItem__link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  margin: 0 var(--spacing-l);
+  background-color: white;
+  transition: width 0.5s ease;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+.menuItem__link:hover::after {
+  width: 80%;
 }
 .hamburger.active + .navbar__menu .menuItem__link,
 .navbar__menu.active .menuItem__link {
@@ -155,6 +201,7 @@ body {
 .menuItem {
   list-style: none;
 }
+
 .hamburger {
   display: none;
 }
@@ -272,36 +319,9 @@ body {
 }
 
 @media (min-width: 701px) {
-<<<<<<< Updated upstream
-    .categoryCards {
-        width: 100%; /* Make sure the cards take up the full width */
-    }
-
-    .categoryCard__Image {
-        width: 350px; /* Set a fixed width for the images */
-        max-width: none; /* Remove any maximum width */
-    }
-    .category__title{
-        padding-right: var(--spacing-l);    
-    }
-    .sectionTitle{
-        font-size: 48px;
-        font-weight: bold;
-    }
-    .cardTitle--small{
-        font-size: 24px;
-    }
-    .text--big{
-        font-size: 32px;
-    }
-    .someGallery__title{
-        padding: var(--spacing-l);
-    }
-=======
   .categoryCards {
     width: 100%; /* Make sure the cards take up the full width */
   }
->>>>>>> Stashed changes
 
   .categoryCard__Image {
     width: 350px; /* Set a fixed width for the images */
@@ -316,6 +336,16 @@ body {
   }
   .cardTitle--small {
     font-size: var(--desktop-cardTitle--small-fontSize);
+  }
+  .navbar__logoImage {
+    width: 100px;
+  }
+  .header {
+    background-image: url(images/headerImage1.png), url(images/headerImage2.png),
+      /* Andet billede */ url(images/headerImage3.png); /* Tredje billede */
+    background-position: left, center, right; /* Juster billedernes position */
+    background-repeat: no-repeat, no-repeat, no-repeat; /* Sørg for, at billederne ikke gentages */
+    background-size: auto, auto, auto; /* Juster billedernes størrelse */
   }
 }
 
@@ -481,8 +511,8 @@ body {
 }
 
 .eventSlider__title {
-    padding-left: var(--spacing-l);
-    padding-bottom: var(--spacing-m);
+  padding-left: var(--spacing-l);
+  padding-bottom: var(--spacing-m);
 }
 
 .eventInfo {
@@ -495,15 +525,9 @@ body {
 }
 
 @media (min-width: 700px) {
-<<<<<<< Updated upstream
-    .eventCards {
-
-    }
-=======
   .eventCards {
     justify-content: center; /* Center the cards horizontally */
   }
->>>>>>> Stashed changes
 
   .eventCard {
     flex: 1 0 300px; /* Make each card take up the same space with a minimum width of 300px */
@@ -528,24 +552,12 @@ body {
   gap: var(--spacing-l);
   padding-bottom: var(--spacing-l);
 }
-<<<<<<< Updated upstream
-.someImages__image{
-    width: 35%;
-}
-.someFooter{
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-xxxxl);
-    padding: var(--spacing-l) 0px;
-    border-top: 0.5px solid var(--stroke-color-grey);
-=======
 .someFooter {
   display: flex;
   justify-content: center;
   gap: var(--spacing-xxxxl);
   padding: var(--spacing-l) 0px;
   border-top: 0.5px solid var(--stroke-color-grey);
->>>>>>> Stashed changes
 }
 .someIcons {
   display: flex;
