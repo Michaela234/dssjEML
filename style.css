@@ -483,14 +483,19 @@
   gap: var(--spacing-l);
   overflow: auto;
   scrollbar-width: none;
- }
-  
- .eventCard {
+  padding-left: var(--spacing-l);
+}
+.eventSlider{
+  background-color: var(--background-color-lightBlue);
+  padding: var(--spacing-m);
+}
+
+.eventCard {
   display: flex;
   flex-direction: column;
- }
-  
- .eventDate {
+}
+
+.eventDate {
   background-color: black;
   flex-direction: column;
   color: white;
@@ -499,45 +504,50 @@
   align-self: flex-start;
   z-index: 1;
   margin-left: var(--spacing-xs);
- }
-  
- .eventCard__image {
+}
+
+.eventCard__image {
   margin-top: -32px;
- }
-  
- .eventTitle {
+}
+
+.eventTitle {
   display: inline-flex;
   flex-wrap: wrap;
- }
-  
- .eventSlider__title {
+}
+
+.eventSlider__title {
   padding-left: var(--spacing-l);
   padding-bottom: var(--spacing-m);
- }
-  
- .eventInfo {
+}
+
+.eventInfo {
   display: flex;
   justify-content: space-between;
- }
-  
- .eventLocation {
+}
+
+.eventLocation {
   display: flex;
- }
-  
- @media (min-width: 700px) {
-  .eventCards {
-    justify-content: center; /* Center the cards horizontally */
-  }
-  
+}
+
+@media (min-width: 700px) {
+  .eventLocation__text, .eventInfo__link {
+      font-size: 24px;
+    }
+    .eventLocation__icon {
+      width: 21.5px;
+      height: auto;
+    }
+
   .eventCard {
-    flex: 1 0 300px; /* Make each card take up the same space with a minimum width of 300px */
+      flex: 1 0 300px; /* Make each card take up the same space with a minimum width of 300px */
   }
-  
+
   .eventCard__image {
-    width: 100%; /* Make the image fill the width of its container */
-    height: auto;
+      width: 100%; /* Make the image fill the width of its container */
+      height: auto;
   }
- }
+ 
+}
  /*----------------Event slider--------------------*/
  .someGallery {
  }
