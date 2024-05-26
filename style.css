@@ -266,10 +266,16 @@ body{
         max-width: none; /* Remove any maximum width */
     }
     .category__title{
-        padding-right: var(--spacing-l);
-        font-size: 45px;
+        padding-right: var(--spacing-l);    
+    }
+    .sectionTitle{
+        font-size: 48px;
         font-weight: bold;
     }
+    .cardTitle--small{
+        font-size: 24px;
+    }
+
 }
 
 /*----product card----*/
@@ -401,27 +407,20 @@ body{
     }
 }
 /*----------------Event slider--------------------*/
-.eventSlider{
-    display: flex;
-    flex-direction: column;
-    padding: var(--spacing-l);
-    padding-right: 0px;
-    gap: var(--spacing-s);
-    background-color: var(--background-color-lightBlue);
-    margin-bottom: var(--spacing-l);
-}
-/*---------Event card-------------*/
-.eventCards{
+/*----------------Event card--------------------*/
+.eventCards {
     display: flex;
     gap: var(--spacing-l);
     overflow: auto;
     scrollbar-width: none;
 }
-.eventCard{
+
+.eventCard {
     display: flex;
     flex-direction: column;
 }
-.eventDate{
+
+.eventDate {
     background-color: black;
     flex-direction: column;
     color: white;
@@ -431,23 +430,42 @@ body{
     z-index: 1;
     margin-left: var(--spacing-xs);
 }
-.eventCard__image{
+
+.eventCard__image {
     margin-top: -32px;
 }
-.eventTitle{
+
+.eventTitle {
     display: inline-flex;
     flex-wrap: wrap;
 }
-.eventTitle__title{
+
+.eventTitle__title {
 }
-.eventInfo{
+
+.eventInfo {
     display: flex;
     justify-content: space-between;
 }
-.eventLocation{
+
+.eventLocation {
     display: flex;
 }
 
+@media (min-width: 700px) {
+    .eventCards {
+        justify-content: center; /* Center the cards horizontally */
+    }
+
+    .eventCard {
+        flex: 1 0 300px; /* Make each card take up the same space with a minimum width of 300px */
+    }
+
+    .eventCard__image {
+        width: 100%; /* Make the image fill the width of its container */
+        height: auto;
+    }
+}
 /*----------------Event slider--------------------*/
 .someGallery{
 }
@@ -500,4 +518,15 @@ body{
 .copyrightSection__text{
     text-align: center;
 }
+.someImages__desktopimages{
+    display: none;
+}
+@media (min-width: 700px) {
+    .someImages__desktopimages {
+        display: block;
+    }
+    .someImages__image{
+        width: 25%;
+    }
 
+}
