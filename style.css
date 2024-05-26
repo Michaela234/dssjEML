@@ -13,7 +13,6 @@ body {
   font-style: normal;
 }
 /*color tokens*/
-<<<<<<< Updated upstream
 :root {
   --text-color-primary: black;
   --text-color-secondary: white;
@@ -24,19 +23,6 @@ body {
   --icon-color-blue: #3175b9;
   --icon-color-black: black;
   --stroke-color-grey: #c9cacc;
-=======
-:root{
-    --text-color-primary: black;
-    --text-color-secondary: white;
-    --background-color-lightGreen: #E9F3EB;
-    --background-color-lightYellow: #FEF8D3;
-    --background-color-lightBlue: #E1ECF7;
-    --icon-color-green: #89B792;
-    --icon-color-blue: #3175B9;
-    --icon-color-black: black;
-    --stroke-color-grey: #C9CACC;
- 
->>>>>>> Stashed changes
 }
 /*spacing tokens*/
 :root {
@@ -51,47 +37,6 @@ body {
   --spacing-xxxxl: 96px;
 }
 /*text styles*/
-<<<<<<< Updated upstream
-:root {
-  --heading-fontSize: 48px;
-  --heading-fontweight: 700;
-  --subHeading-fontSize: 32px;
-  --subHeading-fontweight: 700;
-  --sectionTitle-fontSize: 24px;
-  --sectionTitle-fontweight: 700;
-  --navigationText-fontSize: 18px;
-  --navigationText-fontweight: 500;
-  --text--big-fontSize: 18px;
-  --text--big-fontweight: 300;
-  --text--small-fontSize: 16px;
-  --text--small-fontweight: 300;
-  --footerTitle-fontSize: 16px;
-  --footerTitle-fontweight: 700;
-  --footerText-fontSize: 16px;
-  --footerText-fontweight: 400;
-  --cardTitle--big-fontSize: 18px;
-  --cardTitle--big-fontweight: 700;
-  --cardTitle--small-fontSize: 16px;
-  --cardTitle--small-fontweight: 700;
-  --cardText-fontSize: 16px;
-  --cardText-fontweight: 300;
-  --cardText--link-fontSize: 16px;
-  --cardText--link-fontweight: 400;
-  --cardText--link-text-decoration: ;
-  /*desktop*/
-  --desktop-heading-fontSize: 48px;
-  --desktop-subHeading-fontSize: 64px;
-  --desktop-sectionTitle-fontSize: 48px;
-  --desktop-navigationText-fontSize: 24px;
-  --desktop-text--big-fontSize: 32px;
-  --desktop-text--small-fontSize: 24px;
-  --desktop-footerTitle-fontSize: 24px;
-  --desktop-footerText-fontSize: 24px;
-  --desktop-cardTitle--big-fontSize: 32px;
-  --desktop-cardTitle--small-fontSize: 24px;
-  --desktop-cardText-fontSize: 24px;
-  --desktop-cardText--link-fontSize: 24px;
-=======
 :root{
     --heading-fontSize: 48px;
     --heading-fontweight: 700;
@@ -118,7 +63,6 @@ body {
     --cardText--link-fontSize: 16px;
     --cardText--link-fontweight: 400;
     --cardText--link-text-decoration: ;  
->>>>>>> Stashed changes
 }
 /*basic text styling*/
 .sectionTitle {
@@ -163,9 +107,11 @@ body {
       rgba(0, 0, 0, 0.45) 0%,
       rgba(0, 0, 0, 0.15) 100%
     ),
-    url(tryImages/header.png);
+    url(images/headerImage1.png), url(images/headerImage2.png),
+    url(images/headerImage3.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto 100%;
+  background-position: center;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -184,12 +130,56 @@ body {
   padding: 0;
   margin: 0;
 }
+.navbar__logoImage {
+  width: 50px;
+}
+
+.headerSoMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.headerSoMe__line {
+  width: 2px;
+  height: 100px;
+  background-color: white;
+  margin: 10px 0;
+}
+
+.headerSoMe__icon {
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+  color: white;
+}
 .menuItem__link {
   font-size: var(--navigationText-fontSize);
   font-weight: var(--navigationText-fontweight);
   color: var(--text-color-secondary);
   text-decoration: none;
   padding-left: var(--spacing-l);
+  position: relative;
+}
+
+.menuItem__link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  margin: 0 var(--spacing-l);
+  background-color: white;
+  transition: width 0.5s ease;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+.menuItem__link:hover::after {
+  width: 80%;
 }
 .hamburger.active + .navbar__menu .menuItem__link,
 .navbar__menu.active .menuItem__link {
@@ -198,6 +188,7 @@ body {
 .menuItem {
   list-style: none;
 }
+
 .hamburger {
   display: none;
 }
@@ -220,12 +211,6 @@ body {
   margin-left: 9px;
 }
 @media (max-width: 768px) {
-<<<<<<< Updated upstream
-  .navbar__menu {
-    position: fixed;
-    left: -100%;
-    top: 0;
-=======
     .navbar__menu {
         position: fixed;
         left: -100%;
@@ -268,7 +253,6 @@ body {
 }
 .heading{
     display: flex;
->>>>>>> Stashed changes
     flex-direction: column;
     background-color: #fff;
     width: 100%;
@@ -303,7 +287,6 @@ body {
     -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
   }
-}
 .heading {
   display: flex;
   flex-direction: column;
@@ -329,7 +312,6 @@ body {
   padding: var(--spacing-l);
   gap: var(--spacing-xxs);
 }
-<<<<<<< Updated upstream
 .dropdownText__paragraph {
   width: 100%;
   overflow: hidden;
@@ -340,19 +322,6 @@ body {
 }
 .dropdown__icon {
   color: var(--icon-color-black);
-=======
-.dropdownText__paragraph{
-    width: 100%;
-    overflow: hidden;
-    text-align: center;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-   
-}
-.dropdown__icon{
-    color: var(--icon-color-black);  
->>>>>>> Stashed changes
 }
  
 /*----------------Category section--------------------*/
@@ -374,7 +343,6 @@ body {
 }
  
 @media (min-width: 701px) {
-<<<<<<< Updated upstream
     .categoryCards {
         width: 100%; /* Make sure the cards take up the full width */
     }
@@ -399,12 +367,9 @@ body {
     .someGallery__title{
         padding: var(--spacing-l);
     }
-<<<<<<< Updated upstream
-=======
   .categoryCards {
     width: 100%; /* Make sure the cards take up the full width */
   }
->>>>>>> Stashed changes
 
   .categoryCard__Image {
     width: 350px; /* Set a fixed width for the images */
@@ -420,9 +385,16 @@ body {
   .cardTitle--small {
     font-size: var(--desktop-cardTitle--small-fontSize);
   }
-=======
- 
->>>>>>> Stashed changes
+  .navbar__logoImage {
+    width: 100px;
+  }
+  .header {
+    background-image: url(images/headerImage1.png), url(images/headerImage2.png),
+      /* Andet billede */ url(images/headerImage3.png); /* Tredje billede */
+    background-position: left, center, right; /* Juster billedernes position */
+    background-repeat: no-repeat, no-repeat, no-repeat; /* Sørg for, at billederne ikke gentages */
+    background-size: auto, auto, auto; /* Juster billedernes størrelse */
+  }
 }
  
 /*----product card----*/
@@ -451,21 +423,6 @@ body {
   100% {
     background-position-x: 90%, 105%, 140%, 167%, 175%, 85%;
   }
-<<<<<<< Updated upstream
-}
-.childPagebanner__topcloud {
-}
-.childbanner__animals {
-  max-width: 100%;
-  margin: auto; /* Center horizontally */
-  justify-self: center; /* Center horizontally */
-  align-self: center; /* Center vertically */
-}
-
-.childbannerText {
-  text-align: center;
-  margin: auto;
-=======
   .childPagebanner__topcloud{
  
   }
@@ -483,7 +440,6 @@ body {
 .childbannerText__title{
     font-size: 32px;
     padding: var(--spacing-m);
->>>>>>> Stashed changes
 }
 .childbannerText__title {
   font-size: 32px;
@@ -505,11 +461,6 @@ body {
 }
  
 @media screen and (min-width: 700px) {
-<<<<<<< Updated upstream
-  .childbanner {
-    grid-template-columns: 1fr 1fr;
-    background-size: 19% auto;
-=======
     .childbanner {
         grid-template-columns: 1fr 1fr;
         background-size: 19% auto;
@@ -521,7 +472,6 @@ body {
     .childbannerText__title{
         font-size: 65px;
     }
->>>>>>> Stashed changes
   }
 
   .childbanner__animals {
@@ -576,17 +526,6 @@ body {
 }
  
 @media screen and (min-width: 700px) {
-<<<<<<< Updated upstream
-  .galleryImages {
-    width: 95%;
-    justify-content: center;
-  }
-
-  .galleryImages__image {
-    width: 150px; /* Smaller size for images */
-    height: auto;
-  }
-=======
     .galleryImages {
         width: 95%;
         justify-content: center;
@@ -596,7 +535,6 @@ body {
         width: 150px; /* Smaller size for images */
         height: auto;
     }
->>>>>>> Stashed changes
 }
 /*----------------Event slider--------------------*/
 /*----------------Event card--------------------*/
@@ -633,8 +571,8 @@ body {
 }
  
 .eventSlider__title {
-    padding-left: var(--spacing-l);
-    padding-bottom: var(--spacing-m);
+  padding-left: var(--spacing-l);
+  padding-bottom: var(--spacing-m);
 }
  
 .eventInfo {
@@ -647,16 +585,12 @@ body {
 }
  
 @media (min-width: 700px) {
-<<<<<<< Updated upstream
     .eventCards {
  
     }
-<<<<<<< Updated upstream
-=======
   .eventCards {
     justify-content: center; /* Center the cards horizontally */
   }
->>>>>>> Stashed changes
 
   .eventCard {
     flex: 1 0 300px; /* Make each card take up the same space with a minimum width of 300px */
@@ -666,8 +600,6 @@ body {
     width: 100%; /* Make the image fill the width of its container */
     height: auto;
   }
-=======
- 
     .eventCard {
         flex: 1 0 300px; /* Make each card take up the same space with a minimum width of 300px */
     }
@@ -676,7 +608,6 @@ body {
         width: 100%; /* Make the image fill the width of its container */
         height: auto;
     }
->>>>>>> Stashed changes
 }
 /*----------------Event slider--------------------*/
 .someGallery {
@@ -692,24 +623,12 @@ body {
   gap: var(--spacing-l);
   padding-bottom: var(--spacing-l);
 }
-<<<<<<< Updated upstream
-.someImages__image{
-    width: 35%;
-}
-.someFooter{
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-xxxxl);
-    padding: var(--spacing-l) 0px;
-    border-top: 0.5px solid var(--stroke-color-grey);
-=======
 .someFooter {
   display: flex;
   justify-content: center;
   gap: var(--spacing-xxxxl);
   padding: var(--spacing-l) 0px;
   border-top: 0.5px solid var(--stroke-color-grey);
->>>>>>> Stashed changes
 }
 .someIcons {
   display: flex;
@@ -746,14 +665,6 @@ body {
   display: none;
 }
 @media (min-width: 700px) {
-<<<<<<< Updated upstream
-  .someImages__desktopimages {
-    display: block;
-  }
-  .someImages__image {
-    width: 25%;
-  }
-=======
     .someImages__desktopimages {
         display: block;
     }
@@ -764,5 +675,4 @@ body {
         font-size: 24px;
     }
  
->>>>>>> Stashed changes
 }
