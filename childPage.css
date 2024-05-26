@@ -511,7 +511,6 @@ animation: moveClouds 15s linear infinite;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-<<<<<<< Updated upstream
 }
 .categoryCardsleft {
   margin: var(--spacing-xxxxl) var(--spacing-xl) var(--spacing-xl)
@@ -520,9 +519,7 @@ animation: moveClouds 15s linear infinite;
 }
 .categoryCardsright {
   margin-bottom: var(--spacing-xxxxl);
-=======
   gap: var(--spacing-l);
->>>>>>> Stashed changes
 }
 .categoryCard {
   display: flex;
@@ -530,19 +527,17 @@ animation: moveClouds 15s linear infinite;
   max-width: 300px;
   position: relative;
 }
-<<<<<<< Updated upstream
 .categoryCard__image {
   border: 8px solid white;
 }
 .categoryCartText {
   position: relative;
-=======
+}
 .categoryCard--left{
   margin-top: 8rem;
 }
 .categoryCard--right{
   margin-top: 4rem;
->>>>>>> Stashed changes
 }
 .categoryCard__background{
   background-image: url('/Childpageimages/productcard/productCard_cloud.svg');
