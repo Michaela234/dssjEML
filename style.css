@@ -275,6 +275,12 @@ body{
     .cardTitle--small{
         font-size: 24px;
     }
+    .text--big{
+        font-size: 32px;
+    }
+    .someGallery__title{
+        padding: var(--spacing-l);
+    }
 
 }
 
@@ -440,7 +446,9 @@ body{
     flex-wrap: wrap;
 }
 
-.eventTitle__title {
+.eventSlider__title {
+    padding-left: var(--spacing-l);
+    padding-bottom: var(--spacing-m);
 }
 
 .eventInfo {
@@ -454,7 +462,7 @@ body{
 
 @media (min-width: 700px) {
     .eventCards {
-        justify-content: center; /* Center the cards horizontally */
+
     }
 
     .eventCard {
@@ -479,6 +487,9 @@ body{
     justify-content: center;
     gap: var(--spacing-l);
     padding-bottom: var(--spacing-l);
+}
+.someImages__image{
+    width: 35%;
 }
 .someFooter{
     display: flex;
