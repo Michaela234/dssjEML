@@ -30,60 +30,6 @@ body {
   --cardTitle-fontSize: 32px;
   --cardText-fontSize: 16px;
 }
-.categoryCards {
-}
-
-.categoryCard {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative; /* Only the main container uses position: relative */
-}
-
-.categoryCard__image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.categoryCardText {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.categoryCardText__title {
-  z-index: 2; /* Does so its above the cloud */
-  font-size: var(--cardTitle-fontSize);
-  text-align: center;
-  padding: 16px;
-}
-
-.catagoryCard__cloud {
-  position: absolute;
-  top: 65%; /* So its positioned correctly on the card */
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centering the cloud */
-  z-index: 1; /* so the cloud is BEHIND the title */
-  width: 100%;
-  height: auto;
-}
-
-.categoryCardText__paragraph {
-  z-index: 2;
-  text-align: center;
-  font-size: var(--cardText-fontSize);
-}
 
 /*header*/
 .header {
@@ -137,26 +83,28 @@ body {
 }
 
 /* categories*/
-.categories {
+.categoryChoose {
   background-color: hsla(43, 100%, 81%, 1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
-  padding: var(--spacing-l) 0;
+  padding: var(--spacing-xxxxl) 0;
 }
-
-.categoryText__title {
+.categorySection__title {
   font-size: var(--sectionTitle-fontSize);
   margin: var(--spacing-xl);
+  text-align: center;
+}
+.categories{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: var(--spacing-xxl);
 }
 .category {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(50% - var(--spacing-m));
-  margin: var(--spacing-m);
 }
 .category__image {
   width: 140px;
@@ -169,97 +117,95 @@ body {
   width: auto;
 }
 /* Cartegory sections general styllling*/
-.categorySection {
-}
 .categoryDescription {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  z-index: 2;
+}
+.activeDescription{
+  background-color: #B6CEF2;
 }
 .natureDescription {
-  position: relative;
   background-color: hsla(108, 32%, 64%, 1);
-  z-index: 1;
+}
+.waterDescription{
+  background-color: #C7EDFC;
+}
+.creativeDescription{
+  background-color: #ECCFF2;
+}
+.cultureDescription{
+  background-color: #E8AB80;
 }
 .categoryDescription__title {
-  grid-column: 1 / span 2;
   font-size: var(--sectionTitle-fontSize);
   color: white;
-  justify-self: center;
+  text-align: center;
+  z-index: 2;
+}
+.categoryDescription__container{
+  display: flex;
+  align-items: center;
+  padding: 8%;
 }
 .categoryDescription__text {
   font-size: var(--text--small-fontSize);
-  width: 90%;
 }
 .categoryDescription__image {
   transform: scale(0.8);
-  width: 100%;
+  width: 250px;
 }
 /* Product cards */
-.categoryCards {
+.categoryCards{
   display: flex;
-  justify-content: center; /* Centrerer kortene vandret */
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.categoryCardsleft{
+  margin: var(--spacing-xxxxl) var(--spacing-xl) var(--spacing-xl) var(--spacing-xl);
+  margin-top: var(--spacing-xxxxl);
+}
+.categoryCardsright{
+  margin-bottom: var(--spacing-xxxxl);
 }
 .categoryCard {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 8px;
-  margin: var(--spacing-s);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 230px;
-  width: 100%;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  max-width: 300px;
   position: relative;
 }
-.categoryCardLeft {
-  margin-right: 30%;
-  margin-bottom: var(--spacing-xl);
+.categoryCard__image{
+  border: 8px solid white;
 }
-.categoryCardsRight {
-  margin-left: 30%;
+.categoryCartText{
+  position: relative;
 }
-.categoryCard__image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-.categoryCardText {
+.categoryCardText::before {
+  content: "";
+  position: absolute;
+  top: 180px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100%;
+  background-image: url(Childpageimages/productcard/productCard_cloud.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .categoryCardText__title {
-  z-index: 2; /* Does so its above the cloud */
   font-size: var(--cardTitle-fontSize);
   text-align: center;
-  padding: 16px;
-  position: absolute;
-  top: 65%;
-}
-.catagoryCard__cloud {
-  position: absolute;
-  top: 77.5%; /* So its positioned correctly on the card */
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centering the cloud */
-  z-index: 1; /* so the cloud is BEHIND the title */
-  width: 100%;
-  height: auto;
+  background-color: white;
+  margin-top: -50px;
+  position: relative;
+  z-index: 1;
 }
 .categoryCardText__paragraph {
-  z-index: 2;
   text-align: center;
   font-size: var(--cardText-fontSize);
   background-color: white;
+  padding: 0 var(--spacing-l) var(--spacing-l) var(--spacing-l);
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
 }
 /* backgrounds*/
 
@@ -268,8 +214,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  position: relative;
-  position: sticky;
 }
 .baggroundActive {
   background-image: url(images/activeBaggroundImage.jpeg);
@@ -298,7 +242,7 @@ body {
 
 /* The clouds who seperats the sections*/
 
-.categories::before {
+.categoryChoose::before {
   content: "";
   position: absolute;
   top: 0;
@@ -336,20 +280,105 @@ body {
   background-size: contain;
   z-index: 1;
 }
-
-
-
-
-
-
-.baggroundNatur::before {
+.activeDescription::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -5%;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(Childpageimages/clouds/natureMidClouds.svg);
+  background-image: url(Childpageimages/clouds/activeTopClouds.svg);
+  background-repeat: no-repeat;
+  margin-top: -10%;
+  background-size: contain;
+  z-index: 1;
+}
+.activeDescription::after{
+  content: "";
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(Childpageimages/clouds/activeMidClouds.svg);
+  background-repeat: no-repeat;
+  margin-top: -10%;
+  background-size: contain;
+  z-index: 1;
+}
+.waterDescription::before {
+  content: "";
+  position: absolute;
+  top: -5%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(Childpageimages/clouds/waterTopClouds.svg);
+  background-repeat: no-repeat;
+  margin-top: -10%;
+  background-size: contain;
+  z-index: 1;
+}
+.waterDescription::after{
+  content: "";
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(Childpageimages/clouds/waterMidClouds.svg);
+  background-repeat: no-repeat;
+  margin-top: -10%;
+  background-size: contain;
+  z-index: 1;
+}
+.creativeDescription::before {
+  content: "";
+  position: absolute;
+  top: -5%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(Childpageimages/clouds/creativeTopClouds.svg);
+  background-repeat: no-repeat;
+  margin-top: -10%;
+  background-size: contain;
+  z-index: 1;
+}
+.creativeDescription::after{
+  content: "";
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(Childpageimages/clouds/creativeMidClouds.svg);
+  background-repeat: no-repeat;
+  margin-top: -10%;
+  background-size: contain;
+  z-index: 1;
+}
+.cultureDescription::before {
+  content: "";
+  position: absolute;
+  top: -5%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(Childpageimages/clouds/cultureTopClouds.svg);
+  background-repeat: no-repeat;
+  margin-top: -10%;
+  background-size: contain;
+  z-index: 1;
+}
+.cultureDescription::after{
+  content: "";
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(Childpageimages/clouds/cultureMidClouds.svg);
   background-repeat: no-repeat;
   margin-top: -10%;
   background-size: contain;
