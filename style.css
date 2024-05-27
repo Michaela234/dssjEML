@@ -1,119 +1,3 @@
-<<<<<<< Updated upstream
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-.childPage__body{
-    font-family: "Annie Use Your Telescope", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-/*color tokens*/
-:root{
-    --text-color-primary: black;
-    --text-color-secondary: white;
-    --background-color-lightGreen: #E9F3EB;
-    --background-color-lightYellow: #FEF8D3;
-    --background-color-lightBlue: #E1ECF7;
-    --icon-color-green: #89B792;
-    --icon-color-blue: #3175B9;
-    --icon-color-black: black;
-    --stroke-color-grey: #C9CACC;
-
-}
-/*spacing tokens*/  
-:root{
-    --spacing-xxs: 4px;
-    --spacing-xs: 8px;
-    --spacing-s: 12px;
-    --spacing-m: 16px;
-    --spacing-l: 24px;
-    --spacing-xl: 32px;
-    --spacing-xxl: 48px;
-    --spacing-xxxl: 64px;
-    --spacing-xxxxl: 96px;
-}
-/*text styles*/
-:root{
-    --heading-fontSize: 48px;
-    --heading-fontweight: 700;
-    --subHeading-fontSize: 32px;
-    --subHeading-fontweight: 700;
-    --sectionTitle-fontSize: 24px;
-    --sectionTitle-fontweight: 700;
-    --navigationText-fontSize: 18px;
-    --navigationText-fontweight: 500;
-    --text--big-fontSize: 18px;
-    --text--big-fontweight: 300;
-    --text--small-fontSize: 16px;
-    --text--small-fontweight: 300;
-    --footerTitle-fontSize: 16px;
-    --footerTitle-fontweight: 700;
-    --footerText-fontSize: 16px;
-    --footerText-fontweight: 400;
-    --cardTitle--big-fontSize: 18px;
-    --cardTitle--big-fontweight: 700;
-    --cardTitle--small-fontSize: 16px;
-    --cardTitle--small-fontweight: 700;
-    --cardText-fontSize: 16px;
-    --cardText-fontweight: 300;
-    --cardText--link-fontSize: 16px;
-    --cardText--link-fontweight: 400;
-    --cardText--link-text-decoration: ;   
-}
-/*basic text styling*/
-.sectionTitle{
-    font-size: var(--sectionTitle-fontSize);
-    font-weight: var(--sectionTitle-fontweight);
-}
-.text--big{
-    font-size: var(--text--big-fontSize);
-    font-weight: var(--text--big-fontweight);
-}
-.cardTitle--big{
-    font-size: var(--cardTitle--big-fontSize);
-    font-weight: var(--cardTitle--big-fontweight);
-}
-.cardTitle--small{
-    font-size: var(--cardTitle--small-fontSize);
-    font-weight: var(--cardTitle--small-fontweight);
-}
-.cardText{
-    font-size: var(--cardText-fontSize);
-    font-weight: var(--cardText--link-fontweight);
-}
-.cardText--link{
-    font-size: var(--cardText--link-fontSize);
-    font-weight: var(--cardText--link-fontweight);
-}
-
-/*button styling*/
-.button{
-    font-size: var(--text--small-fontSize);
-    font-weight: var(--text--small-fontweight);
-    color: var(--text-color-primary);
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 4px;
-    padding: var(--spacing-xs) var(--spacing-s);
-}
-/*----------------Header--------------------*/
-.header{
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.15) 100%), url(tryImages/header.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-   }
- @media (max-width: 768px) {
-=======
 * {
   margin: 0;
   padding: 0;
@@ -307,7 +191,6 @@ body{
   margin-left: 9px;
 }
 @media (max-width: 768px) {
->>>>>>> Stashed changes
   .navbar__menu {
     position: fixed;
     left: -100%;
@@ -644,14 +527,10 @@ body{
   scrollbar-width: none;
   padding-left: var(--spacing-l);
 }
-<<<<<<< Updated upstream
-
-=======
 .eventSlider{
   background-color: var(--background-color-lightBlue);
   padding: var(--spacing-m);
 }
->>>>>>> Stashed changes
 .galleryInformation {
     display: flex;
     flex-direction: column;
@@ -712,13 +591,8 @@ body{
 }
 
 .eventSlider__title {
-<<<<<<< Updated upstream
-    padding-left: var(--spacing-s);
-    padding-bottom: var(--spacing-m);
-=======
   padding-left: var(--spacing-l);
   padding-bottom: var(--spacing-m);
->>>>>>> Stashed changes
 }
 
 .eventInfo {
