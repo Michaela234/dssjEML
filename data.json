@@ -1,0 +1,46 @@
+{
+    "nature": [
+      {
+        "image": "",
+        "title": "Guided gåtur",
+        "description": "En hyggelig gåtur med din familie i den danske natur hvor i for en hjælpsom guide som viser jer vej"
+      },
+      {
+        "image": "",
+        "title": "Fed naturlegeplads",
+        "description": "brug for en god omgang leg? Hvorfor ik tage ud i og lege på naturlegepladsen i Sønderborg"
+      },
+      {
+        "image": "",
+        "title": "Gendarmstien",
+        "description": "En historisk og smuk vandretur som altid byder på noget nyt."
+      }
+    ],
+    "active": [
+      {
+        "image": "",
+        "title": "Universe Science Park",
+        "description": "oplevelsesparken hvor sjov er en videnskab "
+      },
+      {
+        "image": "",
+        "title": "Cykeltur i Sønderborg",
+        "description": "Tag cyklen med eller lej en i området og tag ud og opdag naturen"
+      },
+      {
+        "image": "",
+        "title": "Ringridning Tivoli",
+        "description": "Hvert år i Sønderborg har vi tivoli i byen. Det er en lokal favorit for både børn og voksne"
+      },
+      {
+        "image": "",
+        "title": "Gråsten cykelringridning",
+        "description": "Cykel med din egen cykel og vind premier ved at ramme et hul med en lang pind"
+      },
+      {
+        "image": "",
+        "title": "Gokart i Sønderborg",
+        "description": "Kom ud og kør gokart på en fed og fastspændene bane. Bare husk hjelmen"
+      }
+    ]
+  }
