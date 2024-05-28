@@ -63,13 +63,7 @@ body {
   background-color: hsla(209, 100%, 89%, 1);
   position: relative;
   overflow: hidden;
-  height: 80vh;
-  background-image: url("images/cloud_small 1.svg"),
-    url("images/cloud_big 1.svg"), url("images/cloud_big-inverted 1.svg"),
-    url("images/cloud_small 1.svg"), url("images/cloud_big 1.svg"),
-    url("images/cloud_big-inverted 1.svg");
-  background-repeat: no-repeat;
-  background-size: 30% auto;
+  height: 90vh;
   background-position: 5% 7%, 20% 30%, 55% 80%, 82% 45%, 90% 0%, 10% 70%;
 }
 .header__link {
@@ -83,7 +77,8 @@ body {
   margin-right: var(--spacing-xs);
 }
 .header__linkText {
-  font-size: 100px;
+  font-size: var(--navigationText-fontSize);
+  color: black;
 }
 .headerText {
   display: flex;
@@ -91,6 +86,8 @@ body {
   text-align: center;
   height: 100%;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 .headerText__heading {
   font-size: var(--heading-fontSize);
@@ -98,19 +95,37 @@ body {
 .headerText__text {
   font-size: var(--text--big-fontSize);
 }
+/*Clouds in the header*/
+
+.headerclouds__image {
+  position: absolute;
+  top: 50px; /* Juster dette efter behov */
+  animation: moveClouds 10s linear infinite; /* Juster varighed og timing efter behov */
+}
+
+@keyframes moveClouds {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 /*Whishlist icon*/
-.wishListIcon {
-  display: grid;
-  place-items: center;
-  background-color: white;
+.wishListIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px 0 0 12px;
+  position: fixed;
   width: 90px;
   height: 90px;
-  position: fixed;
   top: 10px;
   right: 0;
   cursor: pointer;
   z-index: 10;
-  border-radius: 12px 0 0 12px;
+  background-color: white;
 }
 .wishListCloseIcon {
   width: auto;
@@ -131,12 +146,18 @@ body {
   height: 100vh;
   background-color: white;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  transition: right 0.3s ease-in-out;
+  transition: right 0s ease-in-out;
   padding: 20px;
   z-index: 9;
 }
+.wishList__card {
+  height: 170px;
+}
 .wishList.open {
   right: 0;
+}
+.wishlistIcon {
+  width: 40px;
 }
 /*Whishlist*/
 .wishList {
@@ -146,6 +167,67 @@ body {
 }
 .wishList__title {
   font-size: var(--sectionTitle-fontSize);
+  padding-top: 13px;
+}
+/* - - - styling cards in wishlist - - - */
+.wishList {
+  & .categoryCard {
+    height: 170px;
+    display: flex;
+    flex-direction: row;
+    margin: var(--spacing-s);
+    border-radius: 8px;
+    box-shadow: 6px 6px 15px 0px rgba(0, 0, 0, 0.25);
+    padding: var(--spacing-xs);
+    width: 100%;
+  }
+  & .categoryCard__image {
+    width: 100%;
+  }
+  & .categoryCardText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 var(--spacing-xs);
+  }
+  & .categoryCardText__title {
+    font-size: 20px;
+    padding: 0;
+    background-image: none;
+    margin: 0;
+    height: fit-content;
+    margin-bottom: var(--spacing-xs);
+  }
+  & .categoryCardLink {
+    display: block;
+    color: black;
+
+    text-align: right;
+    bottom: 0;
+  }
+  & .categoryCardText__paragraph {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-bottom: var(--spacing-xs);
+  }
+  & .categorySave {
+    display: none;
+  }
+}
+@media (min-width: 700px) {
+  .categoryDescription__title {
+    font-size: 64px;
+  }
+  .wishList {
+    max-width: 40%;
+  }
+  .categoryCard {
+    height: 500px;
+  }
+}
+.categoryCardLink {
+  display: none;
 }
 
 /* Cartegory sections general styllling*/
@@ -215,11 +297,18 @@ body {
   justify-content: space-evenly;
   gap: var(--spacing-l);
 }
-
 .categoryCard {
   display: flex;
   flex-direction: column;
   max-width: 300px;
+  position: relative;
+  height: fit-content;
+}
+.categoryCard--left {
+  margin-top: 8rem;
+}
+.categoryCard--right {
+  margin-top: 4rem;
 }
 .categoryCard__background {
   background-image: url("/Childpageimages/productcard/productCard_cloud.svg");
@@ -228,12 +317,13 @@ body {
   background-size: contain;
   padding-bottom: 100px; /* Adjust based on the size of the background image */
 }
-
+.categoryCard__image {
+  border-radius: 8px;
+}
 .categoryCardText {
   text-align: center;
   /* margin-top: -50px; Adjust based on the height of the image */
 }
-
 .categoryCardText__title {
   background-image: url("/Childpageimages/productcard/productCard_cloud.svg");
   background-repeat: no-repeat;
@@ -246,189 +336,64 @@ body {
   height: 125px;
   margin-top: -100px;
 }
-
 .categoryCardText__paragraph {
   font-size: var(--cardText-fontSize);
   background-color: white;
   padding: var(--spacing-l);
   border-radius: 4px;
   margin-top: -55px;
+  font-family: "Baskervville", serif;
 }
-:root {
-  --heading-fontSize: 36px;
-  --sectionTitle-fontSize: 32px;
-  --navigationText-fontSize: 16px;
-  --text--big-fontSize: 24px;
-  --text--small-fontSize: 20px;
-  --cardTitle-fontSize: 32px;
-  --cardText-fontSize: 16px;
+.categorySave {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: -50px;
+  right: -20px;
 }
-/*header*/
-.header {
-  background-color: hsla(209, 100%, 89%, 1);
-  position: relative;
-  overflow: hidden;
-  height: 80vh;
-  background-image: url("images/cloud_small 1.svg"),
-    url("images/cloud_big 1.svg"), url("images/cloud_big-inverted 1.svg"),
-    url("images/cloud_small 1.svg"), url("images/cloud_big 1.svg"),
-    url("images/cloud_big-inverted 1.svg");
-  background-repeat: no-repeat;
-  background-size: 30% auto;
-  background-position: 5% 7%, 20% 30%, 55% 80%, 82% 45%, 90% 0%, 10% 70%;
-  animation: moveClouds 15s linear infinite;
+.categorySave__icon {
+  width: 100px;
+  height: 100px;
 }
-@keyframes moveClouds {
+.categorySave__icon path {
+  transition: fill 0.3s ease;
+}
+.categorySave:hover .categorySave__icon path {
+  fill: #ffecbd;
+}
+.categorySave.clicked .categorySave__icon path {
+  fill: #ffca42;
+}
+@keyframes goldBorder {
   0% {
-    background-position-x: -10%, 5%, 40%, 67%, 75%, -5%;
+    box-shadow: 0 0 0 6px #ecc440;
+  }
+  25% {
+    box-shadow: 0 0 0 6px #ecc440;
+  }
+  50% {
+    box-shadow: 0 0 0 6px #fffa8a;
+  }
+  75% {
+    box-shadow: 0 0 0 6px #ddac17;
   }
   100% {
-    background-position-x: 90%, 105%, 140%, 167%, 175%, 85%;
+    box-shadow: 0 0 0 6px #ecc440;
   }
 }
-.header__link {
-  padding: var(--spacing-m);
-  text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.categoryCard.clicked {
+  border-radius: 4px;
+  animation: goldBorder 2s linear infinite;
 }
-.header__icon {
-  margin-right: var(--spacing-xs);
-}
-.header__linkText {
-  font-size: var(--navigationText-fontSize);
-  color: black;
-}
-.headerText {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  height: 100%;
-  justify-content: center;
-}
-.header__heading {
-  font-size: var(--heading-fontSize);
-}
-.header__text {
-  font-size: var(--text--big-fontSize);
+.categoryCard {
+  box-shadow: 0 0 0 6px white;
+  border-radius: 4px;
 }
 
-/*Whishlist icon*/
-.wishListIcons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px 0 0 12px;
-  position: fixed;
-  width: 90px;
-  height: 90px;
-  top: 10px;
-  right: 0;
-  cursor: pointer;
-  z-index: 10;
-  background-color: white;
-}
-.wishlistIcon {
-  width: 40px;
-}
-.wishListCloseIcon {
-  width: auto;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 0;
-  cursor: pointer;
-  z-index: 11;
-  display: none;
-}
-.wishList {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  max-width: 300px;
-  height: 100vh;
-  background-color: white;
-  transition: right 0.5s ease-in-out;
-  padding: 20px;
-  z-index: 9;
-}
-.wishList__card {
-  height: 170px;
-}
-.wishList.open {
-  right: 0;
-}
-/*Whishlist*/
-.wishList {
+.categoryCard {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-.wishList__title {
-  font-size: var(--sectionTitle-fontSize);
-  padding-top: 13px;
-}
-/* - - - styling cards in wishlist - - - */
-.wishList {
-  & .categoryCard {
-    height: 170px;
-    display: flex;
-    flex-direction: row;
-    margin: var(--spacing-s);
-    border-radius: 8px;
-    box-shadow: 6px 6px 15px 0px rgba(0, 0, 0, 0.25);
-    padding: var(--spacing-xs);
-    width: 100%;
-  }
-  & .categoryCard__image {
-    width: 100%;
-  }
-  & .categoryCardText {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 var(--spacing-xs);
-  }
-  & .categoryCardText__title {
-    font-size: 20px;
-    padding: 0;
-    background-image: none;
-    margin: 0;
-    height: fit-content;
-    margin-bottom: var(--spacing-xs);
-  }
-  & .categoryCardLink {
-    display: block;
-    color: black;
- 
-    text-align: right;
-    bottom: 0;
-  }
-  & .categoryCardText__paragraph {
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    margin-bottom: var(--spacing-xs);
-  }
-  & .categorySave {
-    display: none;
-  }
-}
-@media (min-width: 700px) {
-  .categoryDescription__title {
-    font-size: 64px;
-  }
-  .wishList {
-    max-width: 40%;
-  }
-  .categoryCard {
-    height: 500px;
-  }
-}
-.categoryCardLink{
-  display: none;
+  max-width: 300px;
 }
 /* categories*/
 .categoryChoose {
@@ -463,55 +428,7 @@ body {
 .categoryText {
   width: auto;
 }
-/* Cartegory sections general styllling*/
-.categoryDescription {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.activeDescription {
-  background-color: #b6cef2;
-}
-.natureDescription {
-  background-color: hsla(108, 32%, 64%, 1);
-}
-.waterDescription {
-  background-color: #c7edfc;
-}
-.creativeDescription {
-  background-color: #eccff2;
-}
-.cultureDescription {
-  background-color: #e8ab80;
-}
-.categoryDescription__title {
-  font-size: var(--sectionTitle-fontSize);
-  color: white;
-  text-align: center;
-  z-index: 2;
-  margin-top: -10px;
-}
-.categoryDescription__container {
-  display: flex;
-  align-items: center;
-  padding: 8%;
-}
-.categoryDescription__text {
-  font-size: var(--text--small-fontSize);
-}
-.categoryDescription__image {
-  transform: scale(0.8);
-  width: 250px;
-}
-@media (min-width: 700px) {
-  .categoryDescription__title {
-    font-size: 64px;
-  }
-}
-/* Product cards */
 
-@media (min-width: 1000px) {
-}
 /* backgrounds*/
 .baggroundNature {
   background-image: url(images/naturBaggroundImage.jpeg);
@@ -519,11 +436,11 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
- 
+
   max-height: 100vh; /* scroll, background stuck*/
   position: sticky;
   overflow: scroll;
-    background-size: cover;
+  background-size: cover;
 }
 .baggroundActive {
   background-image: url(images/activeBaggroundImage.jpeg);
@@ -531,11 +448,11 @@ body {
   background-size: cover;
   background-position: bottom;
   height: 100vh;
- 
+
   max-height: 100vh; /* scroll, background stuck*/
   position: sticky;
   overflow: scroll;
-    background-size: cover;
+  background-size: cover;
 }
 .baggroundWater {
   background-image: url(images/WaterBaggroundImage.jpeg);
@@ -543,11 +460,11 @@ body {
   background-size: cover;
   background-position: bottom;
   height: 100vh;
- 
+
   max-height: 100vh; /* scroll, background stuck*/
   position: sticky;
   overflow: scroll;
-    background-size: cover;
+  background-size: cover;
 }
 .baggroundCreative {
   background-image: url(images/creativeBaggroundImage.png);
@@ -555,11 +472,11 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
- 
+
   max-height: 100vh; /* scroll, background stuck*/
   position: sticky;
   overflow: scroll;
-    background-size: cover;
+  background-size: cover;
 }
 .baggroundCultural {
   background-image: url(images/culturelBaggroundImage.jpeg);
@@ -567,11 +484,11 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
- 
+
   max-height: 100vh; /* scroll, background stuck*/
   position: sticky;
   overflow: scroll;
-    background-size: cover;
+  background-size: cover;
 }
 /* The clouds that seperats the sections*/
 .categoryChoose::before {
@@ -716,114 +633,12 @@ body {
   z-index: 1;
 }
 
-
-
-
-
-
-
-
-.categoryCards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: var(--spacing-l);
-}
-.categoryCard {
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
-  position: relative;
-  height: fit-content;
-}
-.categoryCard--left {
-  margin-top: 8rem;
-}
-.categoryCard--right {
-  margin-top: 4rem;
-}
-.categoryCard__background {
-  background-image: url("/Childpageimages/productcard/productCard_cloud.svg");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: contain;
-  padding-bottom: 100px; /* Adjust based on the size of the background image */
-}
-.categoryCard__image {
-  border-radius: 8px;
-}
-.categoryCardText {
-  text-align: center;
-  /* margin-top: -50px; Adjust based on the height of the image */
-}
-.categoryCardText__title {
-  background-image: url("/Childpageimages/productcard/productCard_cloud.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  font-size: var(--cardTitle-fontSize);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 125px;
-  margin-top: -100px;
-}
-.categoryCardText__paragraph {
-  font-size: var(--cardText-fontSize);
-  background-color: white;
-  padding: var(--spacing-l);
-  border-radius: 4px;
-  margin-top: -55px;
-  font-family: "Baskervville", serif;
-}
-.categorySave {
-  border: none;
-  background-color: transparent;
-  position: absolute;
-  top: -50px;
-  right: -20px;
-}
-.categorySave__icon {
-  width: 100px;
-  height: 100px;
-}
-.categorySave__icon path {
-  transition: fill 0.3s ease;
-}
-.categorySave:hover .categorySave__icon path {
-  fill: #ffecbd;
-}
-.categorySave.clicked .categorySave__icon path {
-  fill: #ffca42;
-}
-@keyframes goldBorder {
-  0% {
-    box-shadow: 0 0 0 6px #ECC440;
-  }
-  25% {
-    box-shadow: 0 0 0 6px #ECC440;
-  }
-  50% {
-    box-shadow: 0 0 0 6px #FFFA8A;
-  }
-  75% {
-    box-shadow: 0 0 0 6px #DDAC17;
-  }
-  100% {
-    box-shadow: 0 0 0 6px #ECC440;
+@media (min-width: 700px) {
+  .categoryDescription__title {
+    font-size: 64px;
   }
 }
-.categoryCard.clicked {
-  border-radius: 4px;
-  animation: goldBorder 2s linear infinite;
-}
-.categoryCard{
-  box-shadow: 0 0 0 6px white;
-  border-radius: 4px;
-}
+/* Product cards */
 
-.categoryCard {
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
+@media (min-width: 1000px) {
 }

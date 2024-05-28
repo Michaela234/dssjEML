@@ -2,46 +2,39 @@ const wishListIcon = document.querySelector(".wishListIcons img");
 const wishList = document.querySelector(".wishList");
 
 wishListIcon.addEventListener("click", function () {
-    wishList.classList.toggle("open");
-    // Skift ikon baseret på, om ønskelisten er åben eller lukket
-    if (wishList.classList.contains("open")) {
-        wishListIcon.src = "Childpageimages/crossIcon.png";
-    } else {
-        wishListIcon.src = "Childpageimages/WishlistIcon.svg";
-    }
+  wishList.classList.toggle("open");
+  // Skift ikon baseret på, om ønskelisten er åben eller lukket
+  if (wishList.classList.contains("open")) {
+    wishListIcon.src = "Childpageimages/crossIcon.png";
+  } else {
+    wishListIcon.src = "Childpageimages/WishlistIcon.svg";
+  }
 });
-
 
 const buttons = document.querySelectorAll(".categorySave");
 
-buttons.forEach(button => {
-  button.addEventListener('click', event => {
+buttons.forEach((button) => {
+  button.addEventListener("click", (event) => {
     const starButton = event.currentTarget; //currentTarget: få fat i target ind i scriptet, ikke det hvor man faktisk klikker på
     console.log(starButton);
     //få fat i den rigtige card
-    const categoryCard = starButton.parentNode; 
+    const categoryCard = starButton.parentNode;
     console.log(categoryCard);
 
     //tilføj clicked klasser
-    starButton.classList.toggle('clicked');
-    categoryCard.classList.toggle('clicked');
+    starButton.classList.toggle("clicked");
+    categoryCard.classList.toggle("clicked");
 
     addToWishList(categoryCard);
-
-  } );
-})
-
+  });
+});
 
 function addToWishList(categoryCard) {
   const wishListItem = categoryCard.cloneNode(true);
-  const wishListAside = document.querySelector(".wishList__card")
+  const wishListAside = document.querySelector(".wishList__card");
   wishListItem.classList.add("wishList__item");
   wishListAside.appendChild(wishListItem);
 }
-
-
-
-
 
 function addToWishList(categoryCard) {
   const wishListItem = categoryCard.cloneNode(true);
@@ -49,14 +42,13 @@ function addToWishList(categoryCard) {
   wishListItem.classList.add("wishList__item");
   wishListAside.appendChild(wishListItem);
 
-  const emptyMessage = document.querySelector('.wishlistText--empty');
+  const emptyMessage = document.querySelector(".wishlistText--empty");
   if (wishListAside.children.length > 0) {
-    emptyMessage.style.display = 'none';
+    emptyMessage.style.display = "none";
   } else {
-    emptyMessage.style.display = 'block';
+    emptyMessage.style.display = "block";
   }
 }
-
 
 // function addToWishList(event) {
 //   const wishListAside = document.querySelector(".wishList__card");
@@ -83,8 +75,6 @@ function addToWishList(categoryCard) {
 //   card.addEventListener("click", addToWishList);
 // });
 
-
-
 // // add cart to wishlist
 // document.addEventListener("DOMContentLoaded", function () {
 //   function createWishListItem(product) {
@@ -106,16 +96,6 @@ function addToWishList(categoryCard) {
 //     });
 //   });
 // });
-
-
-
-
-
-
-
-
-
-
 
 // const water = document
 // water.src = `${data}`
