@@ -141,17 +141,13 @@ body {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 100%;
   max-width: 300px;
   height: 100vh;
   background-color: white;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   transition: right 0s ease-in-out;
-  padding: 20px;
+  padding: var(--spacing-xl);
   z-index: 9;
-}
-.wishList__card {
-  height: 170px;
 }
 .wishList.open {
   right: 0;
@@ -178,16 +174,19 @@ body {
     margin: var(--spacing-s);
     border-radius: 8px;
     box-shadow: 6px 6px 15px 0px rgba(0, 0, 0, 0.25);
-    padding: var(--spacing-xs);
+    padding: 0;
     width: 100%;
+    border: 6px solid white;
+    border-radius: 4px;
   }
   & .categoryCard__image {
     width: 100%;
+    border-radius: 4px;
   }
   & .categoryCardText {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: flex-start;
     padding: 0 var(--spacing-xs);
   }
   & .categoryCardText__title {
@@ -210,9 +209,18 @@ body {
     padding: 0;
     text-align: left;
     margin-bottom: var(--spacing-xs);
+    background-color: transparent;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    width: 95%;
   }
   & .categorySave {
     display: none;
+  }
+  & .categoryCard.clicked {
+    animation: none;
   }
 }
 @media (min-width: 700px) {
@@ -221,9 +229,6 @@ body {
   }
   .wishList {
     max-width: 40%;
-  }
-  .categoryCard {
-    height: 500px;
   }
 }
 .categoryCardLink {
@@ -301,6 +306,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: var(--spacing-l);
+  margin-bottom: 12rem;
 }
 .categoryCard {
   display: flex;
@@ -308,12 +314,9 @@ body {
   max-width: 300px;
   position: relative;
   height: fit-content;
-}
-.categoryCard--left {
-  margin-top: 8rem;
-}
-.categoryCard--right {
-  margin-top: 4rem;
+  height: auto;
+  background-color: white;
+  margin-top: 6rem;
 }
 .categoryCard__background {
   background-image: url("/Childpageimages/productcard/productCard_cloud.svg");
@@ -643,6 +646,3 @@ body {
     font-size: 64px;
   }
 }
-/* Product cards */
-
-@media (min-width: 1000px)
