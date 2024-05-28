@@ -16,3 +16,28 @@ function closeMenu() {
   hamburger.classList.remove("active");
   navMenu.classList.remove("active");
 }
+
+
+//buttons//
+//CHildButton//
+document.getElementById('childButton').addEventListener('click', function() {
+  window.location.href = 'childPage.html';
+});
+//StjerneButton//
+document.getElementById('buyTicketButton').addEventListener('click', function() {
+  window.location.href = 'https://stjerne-attraktioner.dk/billetter/koeb-billetter/';
+});
+
+//icons to SOME//
+//FB//
+document.getElementById('facebookIcon').addEventListener('click', function() {
+  window.location.href = 'https://www.facebook.com/VisitSonderjylland/';
+});
+//insta//
+document.getElementById('instagramIcon').addEventListener('click', function() {
+  window.location.href = 'https://www.instagram.com/destination_sonderjylland/?hl=da';
+});
+//youtube//
+document.getElementById('youtubeIcon').addEventListener('click', function() {
+  window.location.href = 'https://www.youtube.com/channel/UCVUWWiUQBkTG8hgI_73u_bw';
+});

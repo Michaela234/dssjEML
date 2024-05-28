@@ -264,7 +264,7 @@ body {
   padding: 8%;
 }
 .categoryDescription__text {
-  font-size: var(--text--small-fontSize);
+  font-size: var(--text--big-fontSize);
 }
 .categoryDescription__image {
   transform: scale(0.8);
@@ -290,6 +290,11 @@ body {
     font-size: var(--desktop-text--small-fontSize);
   }
 }
+@media (min-width: 1200px) {
+  .categorySection{
+    margin-top: var(--spacing-xxxl);
+  }
+  }
 /* Product cards */
 .categoryCards {
   display: flex;

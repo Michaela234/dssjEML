@@ -419,6 +419,7 @@
  }
  .childbanner__animals {
   max-width: 100%;
+  justify-self: center;
  }
   
  .childbannerText {
@@ -452,6 +453,7 @@
   }
   
   .childbanner__animals {
+    
   }
   .childbannerText__title {
     font-size: 65px;
@@ -760,4 +762,8 @@
   .someImages__image {
     width: 25%;
   }
+ }
+
+ .someIcons__icon:hover,.button:hover {
+     cursor: pointer;
  }
