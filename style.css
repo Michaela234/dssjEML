@@ -7,14 +7,6 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-<<<<<<< Updated upstream
-=======
-.childPage__body {
-  font-family: "Annie Use Your Telescope", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
->>>>>>> Stashed changes
 /*color tokens*/
 :root {
   --text-color-primary: black;
@@ -105,11 +97,7 @@ body {
   font-size: var(--cardText--link-fontSize);
   font-weight: var(--cardText--link-fontweight);
 }
-<<<<<<< Updated upstream
  
-=======
-
->>>>>>> Stashed changes
 /*button styling*/
 .button {
   font-size: var(--text--small-fontSize);
@@ -119,7 +107,6 @@ body {
   border: 1px solid black;
   border-radius: 4px;
   padding: var(--spacing-xs) var(--spacing-s);
-<<<<<<< Updated upstream
   cursor: pointer;
 }
 .button:hover {
@@ -128,8 +115,6 @@ body {
 .button:focus {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 
-=======
->>>>>>> Stashed changes
 }
 /*----------------Header--------------------*/
 .header {
@@ -145,7 +130,7 @@ body {
   align-items: center;
   margin-right: var(--spacing-l);
 }
-
+ 
 .navbar__menu {
   display: flex;
   justify-content: space-between;
@@ -155,7 +140,7 @@ body {
 .navbar__logoImage {
   width: 50px;
 }
-
+ 
 .menuItem__link {
   font-size: var(--navigationText-fontSize);
   font-weight: var(--navigationText-fontweight);
@@ -186,10 +171,6 @@ body {
 .menuItem {
   list-style: none;
 }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 .hamburger {
   display: none;
 }
@@ -211,11 +192,7 @@ body {
   width: 23px;
   margin-left: 9px;
 }
-<<<<<<< Updated upstream
  
-=======
-
->>>>>>> Stashed changes
 .heading {
   display: flex;
   flex-direction: column;
@@ -242,14 +219,14 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-
+ 
 .headerSoMe__line {
   width: 2px;
   height: 100px;
   background-color: white;
   margin: var(--spacing-m) 0;
 }
-
+ 
 .headerSoMe__icon {
   width: 35px;
   height: 35px;
@@ -269,11 +246,7 @@ body {
 .--desktop {
   display: none;
 }
-<<<<<<< Updated upstream
  
-=======
-
->>>>>>> Stashed changes
 /*----------------dropdown--------------------*/
 .dropdownText {
   display: flex;
@@ -282,11 +255,7 @@ body {
   margin: var(--spacing-xl);
   gap: var(--spacing-xxs);
 }
-<<<<<<< Updated upstream
  
-=======
-
->>>>>>> Stashed changes
 .dropdownText__paragraph {
   width: 100%;
   overflow: hidden;
@@ -298,11 +267,7 @@ body {
 .dropdown__icon {
   color: var(--icon-color-black);
 }
-<<<<<<< Updated upstream
  
-=======
-
->>>>>>> Stashed changes
 /*----------------Category section--------------------*/
 .category {
   padding: var(--spacing-l);
@@ -395,10 +360,6 @@ body {
   padding-left: var(--spacing-l);
   padding-bottom: var(--spacing-s);
 }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 /*----------------Galley section--------------------*/
 .gallery {
   margin-bottom: var(--spacing-xl);
@@ -424,10 +385,6 @@ body {
   width: 250px;
   height: auto;
 }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 .galleryInformation {
   display: flex;
   flex-direction: column;
@@ -439,10 +396,6 @@ body {
 .galleryInformation__button {
   margin: var(--spacing-m);
 }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 /*----------------Event slider / Event card--------------------*/
 .eventCards {
   display: flex;
@@ -456,10 +409,6 @@ body {
   padding: var(--spacing-m);
   margin-bottom: var(--spacing-xl);
 }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 .eventCard {
   display: flex;
   flex-direction: column;
@@ -521,10 +470,6 @@ body {
   display: flex;
   gap: var(--spacing-m);
 }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 /*----------------Footer--------------------*/
 .footer {
   border-top: 0.5px solid var(--stroke-color-grey);
@@ -555,7 +500,6 @@ body {
 .someImages__desktopimages {
   display: none;
 }
-<<<<<<< Updated upstream
 @media (min-width: 700px) {
   .button{
     font-size: var(--desktop-text--small-fontSize);
@@ -578,26 +522,11 @@ body {
   }
   .headerImages__image {
     position:relative;
-=======
-
-@media screen and (min-width: 700px) {
-  .header {
-    margin-bottom: var(--spacing-xl);
-  }
-  .headerImages {
-    display: flex;
-    flex-direction: row;
-  }
-  .headerImages__image {
->>>>>>> Stashed changes
     height: 100vh;
     object-fit: cover;
     width: 33.33%;
     background-position: center;
-<<<<<<< Updated upstream
     z-index: -2;
-=======
->>>>>>> Stashed changes
   }
   .headerSoMe {
     padding-left: var(--spacing-l);
@@ -643,7 +572,6 @@ body {
     width: 21.5px;
     height: auto;
   }
-<<<<<<< Updated upstream
    .eventCard {
     flex: 1 0 300px;
   }
@@ -651,18 +579,6 @@ body {
     width: 100%;
     height: auto;
   }
-=======
-
-  .eventCard {
-    flex: 1 0 300px; /* Make each card take up the same space with a minimum width of 300px */
-  }
-
-  .eventCard__image {
-    width: 100%; /* Make the image fill the width of its container */
-    height: auto;
-  }
-
->>>>>>> Stashed changes
   .navbar__logoImage {
     width: 100px;
   }
@@ -673,22 +589,11 @@ body {
   .cardTitle--small {
     font-size: var(--desktop-cardTitle--small-fontSize);
   }
-<<<<<<< Updated upstream
-=======
-  .navbar__logoImage {
-    width: 100px;
-  }
->>>>>>> Stashed changes
   .childbanner {
     grid-template-columns: 1fr 1fr;
     background-size: 19% auto;
     padding-top: var(--spacing-xxxxl);
   }
-<<<<<<< Updated upstream
-=======
-  .childbanner__animals {
-  }
->>>>>>> Stashed changes
   .childbannerText__title {
     font-size: 65px;
     padding-bottom: var(--spacing-xxxxl);
@@ -716,7 +621,6 @@ body {
   .someImages__image {
     width: 25%;
   }
-<<<<<<< Updated upstream
   .footerLinks__link {
     font-size: var(--desktop-footerText-fontSize);
   }
@@ -725,13 +629,6 @@ body {
   }
   .eventCard__image {
     width: 100%;
-=======
-  .footerInformation {
-    font-size: 24px;
-  }
-  .eventCard__image {
-    width: 100%; /* Make the image fill the width of its container */
->>>>>>> Stashed changes
     height: auto;
   }
   .galleryInformation__button {
@@ -753,10 +650,7 @@ body {
   }
 }
 
-<<<<<<< Updated upstream
 /*navbar menu media query*/
-=======
->>>>>>> Stashed changes
 @media (max-width: 768px) {
   .navbar__menu {
     position: fixed;
@@ -769,62 +663,31 @@ body {
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
-<<<<<<< Updated upstream
   .navbar__menu.active {
     left: 0;
   }
   .menuItem {
     margin: 2.5rem 0;
   } 
-=======
-
-  .navbar__menu.active {
-    left: 0;
-  }
-
-  .menuItem {
-    margin: 2.5rem 0;
-  }
-
->>>>>>> Stashed changes
   .hamburger {
     display: block;
     cursor: pointer;
   }
-<<<<<<< Updated upstream
   .hamburger.active .hamburger__bar:nth-child(2) {
     opacity: 0;
   }
-=======
-
-  .hamburger.active .hamburger__bar:nth-child(2) {
-    opacity: 0;
-  }
-
->>>>>>> Stashed changes
   .hamburger.active .hamburger__bar:nth-child(1) {
     -webkit-transform: translateY(8px) rotate(45deg);
     transform: translateY(8px) rotate(45deg);
   }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
   .hamburger.active .hamburger__bar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
   }
 }
-<<<<<<< Updated upstream
 @media (min-width: 1000px) {
-=======
-@media screen and (min-width: 1000px) {
->>>>>>> Stashed changes
   .childbannerText__title {
     font-size: 125px;
   }
 }
-<<<<<<< Updated upstream
  
-=======
->>>>>>> Stashed changes
