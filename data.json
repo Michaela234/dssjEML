@@ -7,12 +7,17 @@
   {
     "image": "jsonimages/legeplads_rævcard.png",
     "title": "Naturlegeplads",
-    "description": "brug for en god omgang leg? Hvorfor ik tage ud i og lege på naturlegepladsen i Sønderborg"
+    "description": "Brug for en god omgang leg? Hvorfor ik tage ud i og lege på naturlegepladsen i Sønderborg"
   },
   {
     "image": "jsonimages/gendarmstien_rævcard.png",
     "title": "Gendarmstien",
     "description": "En historisk og smuk vandretur som altid byder på noget nyt."
+  },
+  {
+    "image": "jsonimages/krypILy_rævcard.png",
+    "title": "Kryb i ly",
+    "description": "Et hyggeligt sted at kryb i ly i Sønderborgs natur."
   },
   {
     "image": "jsonimages/Guidedtur_rævcard.png",
@@ -22,11 +27,16 @@
   {
     "image": "jsonimages/legeplads_rævcard.png",
     "title": "Naturlegeplads",
-    "description": "brug for en god omgang leg? Hvorfor ik tage ud i og lege på naturlegepladsen i Sønderborg"
+    "description": "Brug for en god omgang leg? Hvorfor ik tage ud i og lege på naturlegepladsen i Sønderborg"
   },
   {
     "image": "jsonimages/gendarmstien_rævcard.png",
     "title": "Gendarmstien",
     "description": "En historisk og smuk vandretur som altid byder på noget nyt."
+  },
+  {
+    "image": "jsonimages/krypILy_rævcard.png",
+    "title": "Kryb i ly",
+    "description": "Et hyggeligt sted at kryb i ly i Sønderborgs natur."
   }
 ]
