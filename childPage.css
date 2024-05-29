@@ -39,11 +39,11 @@ body {
 }
 /*color tokens*/
 :root {
-  --backgroundColor-nature: #92C186;
-  --backgroundColor-active: #B6CEF2;
-  --backgroundColor-water: #C7EDFC;
-  --backgroundColor-creative: #ECCFF2;
-  --backgroundColor-culture: #FFC9A1;
+  --backgroundColor-nature: #92c186;
+  --backgroundColor-active: #b6cef2;
+  --backgroundColor-water: #c7edfc;
+  --backgroundColor-creative: #eccff2;
+  --backgroundColor-culture: #ffc9a1;
 }
 /*header*/
 .header {
@@ -469,7 +469,7 @@ body {
   top: 105%;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 200px;
   background-image: url(Childpageimages/clouds/natureMidClouds.svg);
   background-repeat: no-repeat;
   margin-top: -10%;
@@ -605,7 +605,7 @@ body {
   }
 }
 @media (min-width: 1200px) {
-  .categorySection{
+  .categorySection {
     margin-top: var(--spacing-xxxl);
   }
-  }
+}
