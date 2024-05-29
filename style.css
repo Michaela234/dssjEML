@@ -7,11 +7,6 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-.childPage__body {
-  font-family: "Annie Use Your Telescope", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
 /*color tokens*/
 :root {
   --text-color-primary: black;
@@ -64,7 +59,7 @@ body {
   --cardText--link-fontweight: 400;
   --cardText--link-text-decoration: ;
   /*desktop*/
-  --desktop-heading-fontSize: 48px;
+  --desktop-heading-fontSize: 96px;
   --desktop-subHeading-fontSize: 64px;
   --desktop-sectionTitle-fontSize: 48px;
   --desktop-navigationText-fontSize: 24px;
@@ -112,6 +107,14 @@ body {
   border: 1px solid black;
   border-radius: 4px;
   padding: var(--spacing-xs) var(--spacing-s);
+  cursor: pointer;
+}
+.button:hover {
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.button:focus {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+
 }
 /*----------------Header--------------------*/
 .header {
@@ -168,7 +171,6 @@ body {
 .menuItem {
   list-style: none;
 }
- 
 .hamburger {
   display: none;
 }
@@ -222,13 +224,13 @@ body {
   width: 2px;
   height: 100px;
   background-color: white;
-  margin: 10px 0;
+  margin: var(--spacing-m) 0;
 }
  
 .headerSoMe__icon {
   width: 35px;
   height: 35px;
-  margin: 10px;
+  margin: var(--spacing-m);
   color: white;
 }
 .headerImages {
@@ -358,7 +360,6 @@ body {
   padding-left: var(--spacing-l);
   padding-bottom: var(--spacing-s);
 }
- 
 /*----------------Galley section--------------------*/
 .gallery {
   margin-bottom: var(--spacing-xl);
@@ -384,7 +385,6 @@ body {
   width: 250px;
   height: auto;
 }
- 
 .galleryInformation {
   display: flex;
   flex-direction: column;
@@ -396,7 +396,6 @@ body {
 .galleryInformation__button {
   margin: var(--spacing-m);
 }
- 
 /*----------------Event slider / Event card--------------------*/
 .eventCards {
   display: flex;
@@ -410,12 +409,10 @@ body {
   padding: var(--spacing-m);
   margin-bottom: var(--spacing-xl);
 }
- 
 .eventCard {
   display: flex;
   flex-direction: column;
 }
- 
 .eventDate {
   background-color: black;
   flex-direction: column;
@@ -426,26 +423,21 @@ body {
   z-index: 1;
   margin-left: var(--spacing-xs);
 }
- 
 .eventCard__image {
   margin-top: -32px;
 }
- 
 .eventTitle {
   display: inline-flex;
   flex-wrap: wrap;
 }
- 
 .eventSlider__title {
   padding-left: var(--spacing-l);
   padding-bottom: var(--spacing-m);
 }
- 
 .eventInfo {
   display: flex;
   justify-content: space-between;
 }
- 
 .eventLocation {
   display: flex;
 }
@@ -478,7 +470,6 @@ body {
   display: flex;
   gap: var(--spacing-m);
 }
- 
 /*----------------Footer--------------------*/
 .footer {
   border-top: 0.5px solid var(--stroke-color-grey);
@@ -509,20 +500,33 @@ body {
 .someImages__desktopimages {
   display: none;
 }
- 
-@media screen and (min-width: 700px) {
+@media (min-width: 700px) {
+  .button{
+    font-size: var(--desktop-text--small-fontSize);
+  }
   .header {
     margin-bottom: var(--spacing-xl);
+  }
+  .heading__subHeading {
+    font-size: var(--desktop-subHeading-fontSize);
+    margin-right: var(--spacing-xxxxl);
+  }
+  .heading__heading{
+    font-size: var(--desktop-heading-fontSize);
   }
   .headerImages {
     display: flex;
     flex-direction: row;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.15) 100%);
+    z-index: -1;
   }
   .headerImages__image {
+    position:relative;
     height: 100vh;
     object-fit: cover;
     width: 33.33%;
     background-position: center;
+    z-index: -2;
   }
   .headerSoMe {
     padding-left: var(--spacing-l);
@@ -568,16 +572,13 @@ body {
     width: 21.5px;
     height: auto;
   }
- 
-  .eventCard {
-    flex: 1 0 300px; /* Make each card take up the same space with a minimum width of 300px */
+   .eventCard {
+    flex: 1 0 300px;
   }
- 
   .eventCard__image {
-    width: 100%; /* Make the image fill the width of its container */
+    width: 100%;
     height: auto;
   }
- 
   .navbar__logoImage {
     width: 100px;
   }
@@ -588,15 +589,10 @@ body {
   .cardTitle--small {
     font-size: var(--desktop-cardTitle--small-fontSize);
   }
-  .navbar__logoImage {
-    width: 100px;
-  }
   .childbanner {
     grid-template-columns: 1fr 1fr;
     background-size: 19% auto;
     padding-top: var(--spacing-xxxxl);
-  }
-  .childbanner__animals {
   }
   .childbannerText__title {
     font-size: 65px;
@@ -625,11 +621,14 @@ body {
   .someImages__image {
     width: 25%;
   }
-  .footerInformation {
-    font-size: 24px;
+  .footerLinks__link {
+    font-size: var(--desktop-footerText-fontSize);
+  }
+  .footerLinks__title {
+    font-size: var(--desktop-footerText-fontSize);
   }
   .eventCard__image {
-    width: 100%; /* Make the image fill the width of its container */
+    width: 100%;
     height: auto;
   }
   .galleryInformation__button {
@@ -650,7 +649,8 @@ body {
     padding: 0 var(--spacing-xxxl);
   }
 }
- 
+
+/*navbar menu media query*/
 @media (max-width: 768px) {
   .navbar__menu {
     position: fixed;
@@ -663,35 +663,29 @@ body {
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
- 
   .navbar__menu.active {
     left: 0;
   }
- 
   .menuItem {
     margin: 2.5rem 0;
-  }
- 
+  } 
   .hamburger {
     display: block;
     cursor: pointer;
   }
- 
   .hamburger.active .hamburger__bar:nth-child(2) {
     opacity: 0;
   }
- 
   .hamburger.active .hamburger__bar:nth-child(1) {
     -webkit-transform: translateY(8px) rotate(45deg);
     transform: translateY(8px) rotate(45deg);
   }
- 
   .hamburger.active .hamburger__bar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
   }
 }
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   .childbannerText__title {
     font-size: 125px;
   }
